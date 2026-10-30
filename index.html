@@ -1673,7 +1673,7 @@ html.is-dark .pager .next{color:#111118}
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
               <tbody id="ov-inplace"></tbody>
             </table></div>
-            <p id="ov-price"></p>
+            <p id="ov-pricep"></p>
           </div>
 
           <div class="step">
@@ -2047,7 +2047,7 @@ html.is-dark .pager .next{color:#111118}
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
               <tbody id="iv-inplace"></tbody>
             </table></div>
-            <p id="iv-price"></p>
+            <p id="iv-pricep"></p>
           </div>
 
           <div class="step">
@@ -2090,7 +2090,7 @@ html.is-dark .pager .next{color:#111118}
 
           <div class="step">
             <h3><span class="s">Step 7</span>Risks &amp; diligence</h3>
-            <p id="iv-down"></p>
+            <p id="iv-downp"></p>
             <div class="tw"><table>
               <thead><tr><th>What moves the deal</th><th class="n">NOI</th><th class="n">Value</th><th class="n">Levered IRR</th><th class="n">Multiple</th></tr></thead>
               <tbody id="iv-sens"></tbody>
@@ -2521,7 +2521,7 @@ html.is-dark .pager .next{color:#111118}
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
               <tbody id="rv-inplace"></tbody>
             </table></div>
-            <p id="rv-price"></p>
+            <p id="rv-pricep"></p>
           </div>
 
           <div class="step">
@@ -2632,7 +2632,7 @@ html.is-dark .pager .next{color:#111118}
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
               <tbody id="rs-inplace"></tbody>
             </table></div>
-            <p id="rs-price"></p>
+            <p id="rs-pricep"></p>
           </div>
 
           <div class="step">
@@ -2938,7 +2938,7 @@ html.is-dark .pager .next{color:#111118}
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
               <tbody id="sv-inplace"></tbody>
             </table></div>
-            <p id="sv-price"></p>
+            <p id="sv-pricep"></p>
           </div>
 
           <div class="step">
@@ -3190,7 +3190,7 @@ html.is-dark .pager .next{color:#111118}
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
               <tbody id="gv-inplace"></tbody>
             </table></div>
-            <p id="gv-price"></p>
+            <p id="gv-pricep"></p>
           </div>
 
           <div class="step">
@@ -3522,11 +3522,14 @@ html.is-dark .pager .next{color:#111118}
     <div class="panel" id="cmbs-case" hidden>
       <div class="memo-head">
         <div><p class="eyebrow">Case study · Conduit loan analysis</p><h2>$80M loan on a 400,000 SF suburban office campus</h2></div>
-        <span class="tag">Illustrative</span>
+        <span class="tag">Illustrative · live model</span>
       </div>
       <div class="memo">
         <div class="memo-main">
           <p class="pitch">This loan is the 4th-largest in a $1.0 billion conduit with 45 loans. Everyone in the stack sees the same Annex A line, but each buyer asks a different question: the AAA buyer asks "how bad would things have to get?", while the B-piece buyer asks "what will this specific building be worth in year 10?"</p>
+
+          <div class="case-model" data-ck="cc"></div>
+
 
           <div class="step">
             <h3><span class="s">Step 1</span>The loan</h3>
@@ -3543,16 +3546,9 @@ html.is-dark .pager .next{color:#111118}
             </table></div>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">Lender view</th><th class="n">Rating agency view</th></tr></thead>
-              <tbody>
-                <tr><td>NCF</td><td class="n">$8.0M</td><td class="n">$7.2M (10% haircut)</td></tr>
-                <tr><td>Cap rate</td><td class="n">6.0% (appraisal)</td><td class="n">8.25% (agency)</td></tr>
-                <tr><td>Value</td><td class="n">$133M</td><td class="n">$87.3M</td></tr>
-                <tr><td>LTV</td><td class="n">60%</td><td class="n">92%</td></tr>
-                <tr><td>Debt yield</td><td class="n">10.0%</td><td class="n">9.0%</td></tr>
-                <tr><td>DSCR (IO)</td><td class="n">1.56x</td><td class="n">1.41x</td></tr>
-              </tbody>
+              <tbody id="cc-views"></tbody>
             </table></div>
-            <p>The agency's 92% LTV, not the lender's 60%, drives how much subordination this loan requires. Agencies assume through-the-cycle cap rates and haircut cash flow.</p>
+            <p id="cc-views-p"></p>
           </div>
 
           <div class="step">
@@ -3576,15 +3572,11 @@ html.is-dark .pager .next{color:#111118}
 
           <div class="step">
             <h3><span class="s">Step 3</span>The stress scenario every buyer runs</h3>
-            <ol>
-              <li>In year 6 the large tenant leaves. The cash sweep has trapped ~$4M by then to help re-lease.</li>
-              <li>Re-leasing is slow. By maturity, the building is 75% leased with NCF of $6.2M.</li>
-              <li>At an 8.5% cap rate, value at maturity is ~$72.9M. A new lender needs a 10% debt yield, so the most it will lend is ~$62M.</li>
-              <li>The borrower can't refinance the $80M balance: <b>maturity default</b>.</li>
-              <li>The special servicer orders a new appraisal. ARA = $80M + ~$2M unpaid amounts − 90% × $72.9M ≈ <b>$16.4M</b>.</li>
-              <li>ASER: interest on that $16.4M (~$1.05M a year) is no longer advanced, so the unrated class takes an interest shortfall.</li>
-              <li>If liquidated: ~$66M net recovery after costs and repaying advances, so a <b>~$18M loss (~22% severity)</b>, or 1.8% of the pool.</li>
-            </ol>
+            <ol id="cc-stress"></ol>
+            <div class="tw"><table>
+              <thead><tr><th>Stress variations</th><th class="n">Maturity value</th><th class="n">Loss</th><th class="n">Severity</th><th class="n">Pool loss</th><th class="n">Unrated class left</th></tr></thead>
+              <tbody id="cc-sens"></tbody>
+            </table></div>
           </div>
 
           <div class="step">
@@ -3638,7 +3630,7 @@ html.is-dark .pager .next{color:#111118}
 
           <div class="step">
             <h3><span class="s">Step 5</span>Control and conflicts in the stress case</h3>
-            <p>The $16.4M ARA is applied to the unrated class: $35M − $16.4M = $18.6M, or 53% of its original balance. That's still above the 25% threshold, so the B-piece keeps control of the deal.</p>
+            <p id="cc-control"></p>
             <p>The B-piece's affiliated special servicer may prefer a 2–3 year extension: the loss isn't realized yet, and the building might recover. Senior holders may prefer a sale now, before value falls further. The operating advisor reviews whether the chosen path really maximizes value for all bondholders.</p>
             <div class="callout"><b class="lab">Credit career angle</b>Firms like special servicers, B-piece buyers and CMBS credit funds do exactly this work: re-underwriting loans at origination, watching surveillance data, and running workouts. Knowing each tranche's perspective is what interviewers test.</div>
           </div>
@@ -3646,25 +3638,10 @@ html.is-dark .pager .next{color:#111118}
 
         <aside class="sheet" aria-label="Loan sheet">
           <h4>Loan sheet</h4>
-          <dl>
-            <div class="row"><dt>Loan</dt><dd>$80M</dd></div>
-            <div class="row"><dt>Share of pool</dt><dd>8%</dd></div>
-            <div class="row"><dt>Coupon</dt><dd>6.40% IO</dd></div>
-            <div class="row"><dt>UW NCF</dt><dd>$8.0M</dd></div>
-            <div class="row"><dt>Debt yield</dt><dd>10.0%</dd></div>
-            <div class="row"><dt>DSCR</dt><dd>1.56x</dd></div>
-            <div class="row"><dt>LTV / agency LTV</dt><dd>60% / 92%</dd></div>
-          </dl>
+          <dl id="cc-sheet1"></dl>
           <h4 class="grp">Stress case</h4>
-          <dl>
-            <div class="row"><dt>Maturity NCF</dt><dd>$6.2M</dd></div>
-            <div class="row"><dt>Maturity value</dt><dd>~$72.9M</dd></div>
-            <div class="row"><dt>Refi capacity</dt><dd>~$62M</dd></div>
-            <div class="row"><dt>ARA</dt><dd>~$16.4M</dd></div>
-            <div class="row"><dt>Loss / severity</dt><dd>~$18M / 22%</dd></div>
-            <div class="row"><dt>Pool loss</dt><dd>1.8%</dd></div>
-          </dl>
-          <p class="verdict"><b>Takeaway:</b> irrelevant to the AAA buyer, a key driver for BBB-, and potentially half the B-piece's money.</p>
+          <dl id="cc-sheet2"></dl>
+          <p class="verdict" id="cc-verdict"></p>
         </aside>
       </div>
     </div>
@@ -4030,7 +4007,7 @@ html.is-dark .pager .next{color:#111118}
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
               <tbody id="mv-inplace"></tbody>
             </table></div>
-            <p id="mv-price"></p>
+            <p id="mv-pricep"></p>
           </div>
 
           <div class="step">
@@ -5373,40 +5350,49 @@ html.is-dark .pager .next{color:#111118}
       <div class="memo">
         <div class="memo-main">
           <p class="pitch">A 410,000 SF suburban office campus in New Jersey (a judicial foreclosure state). The $85M 10-year fixed CMBS loan from 2016 (4.30%, interest-only) matures in July 2026. The largest tenant (32% of space) left when its lease expired in 2025. Occupancy fell from 91% to 64%, and NOI from $7.4M to $4.6M. The loan still covers interest (DSCR ~1.26x) but can't be refinanced: a 5.4% debt yield is far below what any lender will accept.</p>
+
+          <div class="case-model" data-ck="pk"></div>
+
           <div class="step">
             <h3><span class="s">Timeline</span>What happened</h3>
             <div class="tw"><table><thead><tr><th>When</th><th>Event</th></tr></thead><tbody>
               <tr><td>Jan 2026</td><td>Borrower requests an extension. The master servicer transfers the loan to special servicing for imminent maturity default.</td></tr>
               <tr><td>Feb</td><td>PNL signed. Information request. Hard lockbox triggered and excess cash trapped.</td></tr>
-              <tr><td>Mar</td><td>Appraisal: $62M as-is. ARA ≈ $85M − 90% × $62M ≈ <b>$29M</b>, which cuts interest advances on the most junior bonds.</td></tr>
-              <tr><td>Apr–May</td><td>Negotiation (Module 04). The servicer's NPV analysis: A/B modification ≈ $61M &gt; DPO $57M &gt; foreclosure ≈ $53M.</td></tr>
+              <tr><td>Mar</td><td id="pk-mar"></td></tr>
+              <tr><td>Apr–May</td><td id="pk-apr"></td></tr>
               <tr><td>Jun</td><td>Controlling class consulted; modification approved.</td></tr>
               <tr><td>Jul</td><td>Modification closes at the original maturity date.</td></tr>
             </tbody></table></div>
           </div>
           <div class="step">
+            <h3><span class="s">NPV test</span>The servicer's options, side by side</h3>
+            <div class="tw"><table>
+              <thead><tr><th>Option</th><th class="n">NPV to the trust</th><th>How it's built</th></tr></thead>
+              <tbody id="pk-npv"></tbody>
+            </table></div>
+            <p id="pk-npv-p"></p>
+          </div>
+          <div class="step">
             <h3><span class="s">Outcome</span>The modified structure</h3>
-            <div class="ds-water">
-              <div class="w1"><b>1 · A-note $55M</b><span>Current pay at ~6.0%, 3-year extension (third year needs 75% leased)</span></div>
-              <div class="w2"><b>2 · Sponsor new money $14M + 8% pref</b><span>$6M paydown + $8M leasing reserve</span></div>
-              <div class="w3"><b>3 · B-note $24M (hope note)</b><span>Accrues; paid only from sale or refi proceeds</span></div>
-              <div class="w4"><b>4 · Residual</b><span>Split between the lender and the sponsor</span></div>
-            </div>
-            <p>Balance after paydown: $85M − $6M = $79M = $55M A-note + $24M B-note. Every lever is tightened: hard lockbox, leasing approvals, a reaffirmed carve-out guaranty, and modification fees and legal costs paid by the borrower.</p>
-            <div class="callout"><b class="lab">Who wins if it works?</b>If the building leases to 85% and sells for $90M in 2029: A-note $55M is repaid. The sponsor gets back $14M plus ~$3.6M of pref. That leaves ~$17M for the B-note ($24M plus accrued interest), so a partial recovery on the hope note. Without the sponsor's $14M, the trust would likely have owned a 64%-leased REO building selling in the low $50s.</div>
+            <div class="ds-water" id="pk-water"></div>
+            <p id="pk-bal"></p>
+            <div class="tw"><table>
+              <thead><tr><th>If the plan works: exit waterfall</th><th class="n">$M</th><th>Note</th></tr></thead>
+              <tbody id="pk-exitt"></tbody>
+            </table></div>
+            <div class="callout"><b class="lab">Who wins if it works?</b><span id="pk-win"></span></div>
+            <div class="tw"><table>
+              <thead><tr><th>What moves the deal</th><th class="n">Mod NPV</th><th class="n">Best option</th><th class="n">B-note recovery</th><th class="n">Sponsor IRR</th></tr></thead>
+              <tbody id="pk-sens"></tbody>
+            </table></div>
           </div>
         </div>
         <aside class="sheet">
           <h4>Loan sheet</h4>
-          <dl>
-            <div class="row"><dt>Original loan</dt><dd>$85M CMBS</dd></div>
-            <div class="row"><dt>Occupancy</dt><dd>91% → 64%</dd></div>
-            <div class="row"><dt>NOI</dt><dd>$7.4M → $4.6M</dd></div>
-            <div class="row"><dt>Appraisal</dt><dd>$62M</dd></div>
-            <div class="row"><dt>LTV</dt><dd>137%</dd></div>
-            <div class="row"><dt>Debt yield</dt><dd>5.4%</dd></div>
-          </dl>
-          <p class="verdict"><b>Resolution:</b> A/B modification with $14M of new sponsor money.</p>
+          <dl id="pk-sheet1"></dl>
+          <h4 class="grp">Workout</h4>
+          <dl id="pk-sheet2"></dl>
+          <p class="verdict" id="pk-verdict"></p>
         </aside>
       </div>
 
@@ -7159,7 +7145,7 @@ html.is-dark .pager .next{color:#111118}
       T.fwd=fx('Forward NOI','In-place NOI without the departing tenant',F.N(p.ip-p.mo)+' RSF × $'+p.ipr+' + other '+F.M2(oth1)+' − opex '+F.M2(p.ox*R/1e6)+' = <b>'+F.$M2(r.fwd)+'</b>','Under FSG the landlord still pays opex on the space the tenant leaves.');
       const gic=r.inNOI/p.price;
       T.gic=fx('Going-in cap rate','In-place NOI ÷ purchase price',F.$M2(r.inNOI)+' ÷ '+F.$M1(p.price)+' = <b>'+F.P1(gic)+'</b>','Misleading here: forward NOI is '+(r.fwd<0?'negative':F.$M2(r.fwd))+'.');
-      K.set('price','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/R)+'/RSF). The going-in cap on T-12 looks like '+K.t('gic',F.P1(gic))+', but forward NOI is '+(r.fwd<0?'negative':'only '+F.$M2(r.fwd))+'. Price off forward NOI after known rollover and off dark value, not T-12.');
+      K.set('pricep','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/R)+'/RSF). The going-in cap on T-12 looks like '+K.t('gic',F.P1(gic))+', but forward NOI is '+(r.fwd<0?'negative':'only '+F.$M2(r.fwd))+'. Price off forward NOI after known rollover and off dark value, not T-12.');
       K.set('suites','~'+F.N(p.ss)+' RSF');
       const b=[['Purchase price',p.price],['Closing costs (incl. transfer taxes)',r.close],['Base building capital &amp; amenities',p.cap],['Spec suites ('+F.N(p.ss)+' RSF × $'+p.ssc+')',r.suites],['TI: '+F.N(r.nw)+' RSF new at $'+p.ti+'; '+F.N(p.ren)+' RSF renewals at $'+p.rti,r.ti],['Leasing commissions',r.lc],['Contingency (10% of hard capital)',r.cont],['Carry &amp; operating shortfall',r.carry],['Financing fees &amp; interest reserve',r.fin]];
       K.rows('basis',b.map(([n,v])=>({c:[n,F.M1(v),ps(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M1(r.total)),'~'+ps(r.total)]}]));
@@ -7448,7 +7434,7 @@ html.is-dark .pager .next{color:#111118}
       T.innoi=fx('In-place NOI','Rent − lost recoveries on vacant − non-recoverables',row('Rent',F.M2(r.ipSF*p.ipr/1e6))+row('Lost recoveries','('+F.M2((S-r.ipSF)*p.rec/1e6)+')')+row('Non-recoverable','('+F.M2(p.nr)+')')+row('NOI',F.$M2(r.inNOI),1));
       T.gic=fx('Going-in cap rate','In-place NOI ÷ purchase price',F.$M2(r.inNOI)+' ÷ '+F.$M1(p.price)+' = <b>'+F.P1(r.gic)+'</b>','Below the '+p.rate+'% debt cost: negative leverage on day one.');
       T.mtm=fx('Mark-to-market','Market rent ÷ in-place rent − 1','$'+p.mkt.toFixed(2)+' ÷ $'+p.ipr.toFixed(2)+' − 1 = <b>'+F.P0(r.mtm)+'</b>');
-      K.set('price','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/S)+'/SF), a '+K.t('gic',F.P1(r.gic))+' going-in cap. '+(r.gic<p.rate/100?'That\'s below the debt cost, so the deal has negative leverage on day one. Buyers accept it because they\'re paying for rent growth: in-place leases roll within ~'+Math.round(p.roll/12)+' years.':'That\'s above the debt cost, so leverage is positive from day one.'));
+      K.set('pricep','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/S)+'/SF), a '+K.t('gic',F.P1(r.gic))+' going-in cap. '+(r.gic<p.rate/100?'That\'s below the debt cost, so the deal has negative leverage on day one. Buyers accept it because they\'re paying for rent growth: in-place leases roll within ~'+Math.round(p.roll/12)+' years.':'That\'s above the debt cost, so leverage is positive from day one.'));
       const b=[['Purchase price',p.price],['Closing costs',p.close],['Base building capex (roof, sprinklers, docks, paving, LED, cosmetics)',p.capex],['Contingency (10% of capex)',r.cont],['TI on rollover and lease-up',r.ti],['Leasing commissions',r.lc],['Downtime &amp; free rent carry',r.carry],['Financing fees &amp; interest reserve',r.fin]];
       K.rows('basis',b.map(([n,v])=>({c:[n,F.M1(v),ps(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M1(r.total)),'~'+ps(r.total)]}]));
       T.basis=fx('All-in basis','Sum of the basis lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M1(v))).join('')+row('All-in basis',F.$M1(r.total),1),'Carry is any month when NOI goes negative during rollover downtime.');
@@ -7464,7 +7450,7 @@ html.is-dark .pager .next{color:#111118}
       K.set('ret2','Financing: a bridge loan at '+p.ltc+'% LTC ('+K.t('loan',F.$M1(r.loan))+', ~'+p.rate+'%) with capex and leasing costs as future funding. Equity '+K.t('eq',F.$M1(r.equity))+'. Early years run near break-even after interest; most of the return comes at sale in month '+r.saleM+'.');
       const dn=this.run(Object.assign({},p,{mkt:p.mkt-1.5,cap:p.cap+0.5}));
       K.set('scen','<div><dt>Downside</dt><dd>'+dn.mult.toFixed(2)+'x<small>$'+(p.mkt-1.5).toFixed(2)+' rents, '+(p.cap+0.5).toFixed(2)+'% exit</small></dd></div><div><dt>Base</dt><dd>'+K.t('irr',F.P1(r.irr))+'<small>Levered IRR · '+K.t('mult',r.mult.toFixed(2)+'x')+' · '+F.yrs(r.saleM)+' years</small></dd></div><div><dt>Break-even NOI</dt><dd>'+K.t('be',F.$M2(be))+'<small>Value = basis at '+p.cap.toFixed(2)+'%</small></dd></div>');
-      K.set('down','If market rents soften to $'+(p.mkt-1.5).toFixed(2)+' and buyers demand a '+(p.cap+0.5).toFixed(2)+'% cap, value is ~'+F.$M1(dn.value)+', '+(dn.value<dn.total?'below':'roughly')+' the basis, and equity returns '+dn.mult.toFixed(2)+'x. The thesis depends on market rent holding, so diligence focuses on what tenants will really pay for a 24\' building.');
+      K.set('downp','If market rents soften to $'+(p.mkt-1.5).toFixed(2)+' and buyers demand a '+(p.cap+0.5).toFixed(2)+'% cap, value is ~'+F.$M1(dn.value)+', '+(dn.value<dn.total?'below':'roughly')+' the basis, and equity returns '+dn.mult.toFixed(2)+'x. The thesis depends on market rent holding, so diligence focuses on what tenants will really pay for a 24\' building.');
       K.sens('sens',[['Market rent –$1/SF',{mkt:p.mkt-1}],['Exit cap +50 bps',{cap:p.cap+0.5}],['Renewals 40% (more move-outs)',{ren:40}],['Downtime 12 months',{down:12}],['Capex +25%',{capex:p.capex*1.25}]],
         [(s,b)=>K.d(s.noiS-b.noiS,x=>'$'+x.toFixed(2)+'M'),(s,b)=>K.d(s.value-b.value,x=>'$'+x.toFixed(1)+'M'),s=>F.P1(s.irr),s=>s.mult.toFixed(2)+'x']);
       const dyIn=r.inNOI/r.loan, dyS=r.noiS/r.loan;
@@ -7514,7 +7500,7 @@ html.is-dark .pager .next{color:#111118}
     render(r,p,K){
       const {F,fx,row,T}=K, R=p.gla, ps=x=>'$'+Math.round(x*1e6/R), h=r.h;
       K.rows('inplace',[{c:['Leased: '+F.N(p.ex)+' SF, avg ~$'+p.exr+' base rent',F.M2(p.ex*p.exr/1e6)]},{c:['Co-tenancy rent reductions','('+F.M2(p.cot)+')']},{c:['Lost recoveries on '+F.N(R-p.ex)+' SF vacant (~$'+p.vx+'/SF)','('+F.M2((R-p.ex)*p.vx/1e6)+')']},{c:['Non-recoverable expenses','('+F.M2(p.nr)+')']},{tot:1,c:['In-place NOI',F.M2(r.inNOI)]}]);
-      K.set('price','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/R)+'/SF), a '+F.P1(r.inNOI/p.price)+' cap on depressed income. Replacement cost is ~$300/SF. Like the distressed office and hotel, this is priced on basis, not current NOI.');
+      K.set('pricep','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/R)+'/SF), a '+F.P1(r.inNOI/p.price)+' cap on depressed income. Replacement cost is ~$300/SF. Like the distressed office and hotel, this is priced on basis, not current NOI.');
       const b=[['Purchase price',p.price],['Closing costs',p.close],['Facade, signage, lot, box demising, pad site work',p.capex],['Contingency (10% of capex)',r.cont],['TI &amp; landlord work',r.ti],['Leasing commissions',r.lc],['Carry &amp; co-tenancy shortfall during lease-up',r.carry],['Financing fees &amp; interest reserve',r.fin]];
       K.rows('basis',b.map(([n,v])=>({c:[n,F.M1(v),ps(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M1(r.total)),ps(r.total)]}]));
       T.basis=fx('All-in basis','Sum of the basis lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M1(v))).join('')+row('All-in basis',F.$M1(r.total),1));
@@ -7572,7 +7558,7 @@ html.is-dark .pager .next{color:#111118}
     render(r,p,K){
       const {F,fx,row,T}=K, R=p.gla, ps=x=>'$'+Math.round(x*1e6/R);
       K.rows('inplace',[{c:['Leased shops: '+F.N(p.ex)+' SF × $'+p.exr,F.M2(p.ex*p.exr/1e6)]},{c:['Co-tenancy rent reductions','('+F.M2(p.cot)+')']},{c:['Lost recoveries on '+F.N(R-p.ex)+' SF vacant (~$'+p.vx+'/SF)','('+F.M2((R-p.ex)*p.vx/1e6)+')']},{c:['Non-recoverable expenses','('+F.M2(p.nr)+')']},{tot:1,c:['In-place NOI',F.M2(r.inNOI)]}]);
-      K.set('price','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/R)+'/SF), a '+F.P1(r.inNOI/p.price)+' cap on in-place NOI. We\'re paying for the land, the location and the grocer box.');
+      K.set('pricep','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/R)+'/SF), a '+F.P1(r.inNOI/p.price)+' cap on in-place NOI. We\'re paying for the land, the location and the grocer box.');
       const b=[['Purchase price',p.price],['Closing costs',p.close],['Facade, lot, signage &amp; pad site work',p.capex],['Contingency',r.cont],['Grocer landlord work ('+F.N(p.gsf)+' SF × $'+p.glw+')',r.glw],['Shop TI ('+F.N(p.ssf)+' SF × $'+p.tis+')',r.ti],['Leasing commissions',r.lc],['Carry during lease-up',r.carry],['Financing fees &amp; interest reserve',r.fin]];
       K.rows('basis',b.map(([n,v])=>({c:[n,F.M2(v)]})).concat([{tot:1,c:['Gross basis',F.M2(r.total)]},{c:['Less: '+p.np+' pad sales','('+F.M2(r.pads)+')']},{tot:1,c:['Net basis',K.t('net',F.M2(r.net)+' ('+ps(r.net)+'/SF)')]}]));
       T.net=fx('Net basis','Gross basis − pad sale proceeds',F.$M2(r.total)+' − '+F.$M2(r.pads)+' = <b>'+F.$M2(r.net)+'</b>','Selling pads returns capital early: the proceeds pay down the loan.');
@@ -7619,7 +7605,7 @@ html.is-dark .pager .next{color:#111118}
     render(r,p,K){
       const {F,fx,row,T}=K, U=r.U, pu=x=>F.K(x*1e3/U), i0=r.i0, st=r.st, h=r.h;
       K.rows('inplace',[{c:['Gross potential rent: '+F.N(U)+' × '+F.D(p.r0)+' × 12',F.M2(i0.gpr)]},{c:['Vacancy ('+F.P0(1-p.o0/100)+', incl. down units)','('+F.M2(i0.vac)+')']},{c:['Bad debt &amp; concessions','('+F.M2(i0.bdl)+')']},{c:['Other income',F.M2(i0.oi)]},{tot:1,c:['EGI',F.M2(i0.egi)]},{c:['Operating expenses ('+F.D(p.ox0)+'/unit, inflated by emergency repairs)','('+F.M2(i0.opx)+')']},{c:['Management ('+p.mg+'%)','('+F.M2(i0.mgt)+')']},{tot:1,c:['In-place NOI',F.M2(i0.noi)]}]);
-      K.set('price','Purchase price: '+F.$M1(p.price)+' ('+F.K(p.price*1e3/U)+'/unit), a '+F.P1(i0.noi/p.price)+' cap on in-place NOI. Replacement cost is $300k+ per unit.');
+      K.set('pricep','Purchase price: '+F.$M1(p.price)+' ('+F.K(p.price*1e3/U)+'/unit), a '+F.P1(i0.noi/p.price)+' cap on in-place NOI. Replacement cost is $300k+ per unit.');
       const b=[['Purchase price',p.price],['Closing costs',p.close],['Deferred maintenance &amp; life safety',p.dm],['Interior renovations ('+F.N(U)+' × $'+p.int+'k)',r.intT],['Exterior &amp; amenities',p.ext],['Contingency (10%)',r.cont],['Operating shortfall during turnaround',r.carry],['Financing fees &amp; interest reserve',r.fin]];
       K.rows('budget',b.map(([n,v])=>({c:[n,F.M2(v),pu(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M2(r.total)),pu(r.total)]}]));
       T.basis=fx('All-in basis','Sum of the budget lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M2(v))).join('')+row('All-in basis',F.$M2(r.total),1));
@@ -7824,7 +7810,7 @@ html.is-dark .pager .next{color:#111118}
     render(r,p,K){
       const {F,fx,row,T}=K, IL=r.IL, pu=x=>F.K(x*1e3/IL);
       K.rows('inplace',[{c:[F.N(p.units)+' units × '+p.ao+'% × '+F.D(p.ar)+' × 12, plus other income',F.M2(r.inRev)]},{c:['Operating expenses (~'+(100-p.am)+'%)','('+F.M2(r.inRev-r.aNOI0)+')']},{tot:1,c:['In-place NOI',F.M2(r.aNOI0)]}]);
-      K.set('price','Purchase price: '+F.$M1(p.price)+' ('+F.K(p.price*1e3/p.units)+'/unit), a '+F.P1(r.aNOI0/p.price)+' cap on in-place NOI.');
+      K.set('pricep','Purchase price: '+F.$M1(p.price)+' ('+F.K(p.price*1e3/p.units)+'/unit), a '+F.P1(r.aNOI0/p.price)+' cap on in-place NOI.');
       const b=[['Purchase price',p.price],['Closing costs',p.close],['Common area build-out ('+F.N(p.csq)+' SF × $'+p.csf+')',r.common],['Unit upgrades ('+IL+' × $'+p.upg+'k)',r.upgT],['Life safety, generator, elevators, accessibility',p.ls],['Common area FF&amp;E',p.ffe],['Pre-opening, marketing &amp; hiring',p.preo],['Contingency (~10% of hard)',r.cont],['Transition carry',r.carry],['Financing fees &amp; interest reserve',r.fin]];
       K.rows('budget',b.map(([n,v])=>({c:[n,F.M1(v),pu(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M1(r.total)),pu(r.total)]}]));
       T.basis=fx('All-in basis','Sum of the budget lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M1(v))).join('')+row('All-in basis',F.$M1(r.total),1),'In-place apartment NOI covers part of the interest during the transition.');
@@ -7913,7 +7899,7 @@ html.is-dark .pager .next{color:#111118}
       const {F,fx,row,T}=K, NS=p.nrsf+p.xsf;
       K.rows('inplace',[{c:[F.N(p.nrsf)+' NRSF × '+p.o0+'% × $'+p.r0.toFixed(2),F.M2(r.in0)]},{c:['Fees &amp; other income',F.M2(p.f0)]},{c:['Operating expenses (~'+F.P0(p.ox0/(r.in0+p.f0))+')','('+F.M2(p.ox0)+')']},{tot:1,c:['In-place NOI',F.M2(r.noi0)]}]);
       T.econ=fx('Economic occupancy','Physical occupancy × achieved rent ÷ street rate',p.o0+'% × $'+p.r0.toFixed(2)+' ÷ $'+p.street.toFixed(2)+' = <b>'+F.P0(r.econ)+'</b>','The gap to physical occupancy is the revenue-management upside.');
-      K.set('price','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/p.nrsf)+'/NRSF), a '+F.P1(r.noi0/p.price)+' cap on in-place NOI. Economic occupancy is only ~'+K.t('econ',F.P0(r.econ))+' ('+p.o0+'% physical × $'+p.r0.toFixed(2)+' ÷ $'+p.street.toFixed(2)+' street). Try it in the calculator on the storage terminology tab.');
+      K.set('pricep','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/p.nrsf)+'/NRSF), a '+F.P1(r.noi0/p.price)+' cap on in-place NOI. Economic occupancy is only ~'+K.t('econ',F.P0(r.econ))+' ('+p.o0+'% physical × $'+p.r0.toFixed(2)+' ÷ $'+p.street.toFixed(2)+' street). Try it in the calculator on the storage terminology tab.');
       const b=[['Purchase price',p.price],['Closing costs',p.close],['Security, tech &amp; curb appeal',p.tech],['Expansion: '+F.N(p.xsf)+' NRSF × $'+p.xc,r.xcost],['Expansion soft costs',p.xs],['Lease-up carry',r.carry],['Financing fees &amp; interest',r.fin]];
       K.rows('basis',b.map(([n,v])=>({c:[n,F.M2(v)]})).concat([{tot:1,c:['All-in basis ('+F.N(NS)+' NRSF)',K.t('basis',F.M2(r.total)+' ($'+Math.round(r.total*1e6/NS)+'/NRSF)')]}]));
       T.basis=fx('All-in basis','Sum of the basis lines',b.map(([n,v])=>row(n.replace(/:.*$/,''),F.M2(v))).join('')+row('All-in basis',F.$M2(r.total),1));
@@ -8043,6 +8029,96 @@ html.is-dark .pager .next{color:#111118}
       K.sheet('sheet3',[['NOI',F.$M2(a.noi),'n0'],['Yield on cost',F.P1(a.yoc)],['Value vs. cost',sg(a.vc),'v0']]);
       K.set('verdict','<b>Verdict:</b> '+(b.vc>a.vc?'the tax exemption makes the project feasible ('+sg(b.vc)+' vs. '+sg(a.vc)+' of value over cost); the affordable units are the price of it.':'at these assumptions the program doesn\'t pay for the affordable units.'));
     }});
+  // ---------- @end ----------
+  // ---------- @cc ----------
+  // ---------- CMBS case: live conduit loan stress model ----------
+  CK.mount({key:'cc',
+    intro:'Change the loan and the stress assumptions; the lender vs. agency view, the stress steps, the loss and who absorbs it all recalculate. The two loss presets on the bond-stack slider follow your numbers. Hover or tap a dotted number to see how it is calculated.',
+    inputs:[['mncf','Maturity NCF $M',6.2,0.1,0],['mcap','Maturity cap %',8.5,0.25,1],['ncf','UW NCF $M',8,0.1,0],['acap','Appraisal cap %',6,0.25,1],['agcap','Agency cap %',8.25,0.25,1],['loan','Loan $M',80,1,1],['cpn','Coupon %',6.4,0.05,0],['rdy','Refi debt yield %',10,0.25,1],
+      ['hc','Agency NCF haircut %',10,1,0,100,1],['unp','Unpaid amounts at appraisal $M',2,0.25,0,null,1],['adv','Advances &amp; accrued at liquidation $M',4,0.25,0,null,1],['lc','Liquidation costs % of value',9.5,0.5,0,null,1],['pool','Pool size $M',1000,50,100,null,1],['bp','Unrated class $M',35,1,1,null,1],['thr','Control threshold %',25,1,0,100,1]],
+    note:'Fixed in the model: interest-only loan; ARA = loan + unpaid amounts − 90% of the new appraisal; ASER = ARA × coupon. Loss = loan + advances and accrued interest − net recovery (value less liquidation costs). The ARA is applied to the unrated class first to test control.',
+    run(p){
+      const v=p.ncf/(p.acap/100), agN=p.ncf*(1-p.hc/100), agV=agN/(p.agcap/100), ds=p.loan*p.cpn/100;
+      const mv=p.mncf/(p.mcap/100), refi=p.mncf/(p.rdy/100), ara=Math.max(0,p.loan+p.unp-0.9*mv), aser=ara*p.cpn/100;
+      const rec=mv*(1-p.lc/100), loss=Math.max(0,p.loan+p.adv-rec), sev=loss/p.loan, pl=loss/p.pool, bpl=Math.max(0,p.bp-ara);
+      return {v,agN,agV,ds,ltv:p.loan/v,agltv:p.loan/agV,dy:p.ncf/p.loan,agdy:agN/p.loan,dscr:p.ncf/ds,agdscr:agN/ds,mv,refi,ara,aser,rec,loss,sev,pl,bpl,share:p.loan/p.pool,def:refi<p.loan,flags:refi>=p.loan?['At these assumptions the loan refinances at maturity: no default, so no loss.']:[]};
+    },
+    render(r,p,K){
+      const {F,fx,row,T}=K, P=x=>(x*100).toFixed(0)+'%';
+      K.rows('views',[{c:['NCF',F.$M1(p.ncf),F.$M1(r.agN)+' ('+p.hc+'% haircut)']},{c:['Cap rate',p.acap.toFixed(2)+'% (appraisal)',p.agcap.toFixed(2)+'% (agency)']},{c:['Value',K.t('v',F.$M1(r.v)),K.t('agv',F.$M1(r.agV))]},{c:['LTV',K.t('ltv',P(r.ltv)),K.t('agltv',P(r.agltv))]},{c:['Debt yield',F.P1(r.dy),F.P1(r.agdy)]},{c:['DSCR (IO)',K.t('dscr',r.dscr.toFixed(2)+'x'),r.agdscr.toFixed(2)+'x']}]);
+      T.v=fx('Lender value','UW NCF ÷ appraisal cap',F.$M1(p.ncf)+' ÷ '+p.acap.toFixed(2)+'% = <b>'+F.$M1(r.v)+'</b>');
+      T.agv=fx('Agency value','Haircut NCF ÷ agency cap',F.$M1(p.ncf)+' × (1 − '+p.hc+'%) = '+F.$M2(r.agN)+'<br>'+F.$M2(r.agN)+' ÷ '+p.agcap.toFixed(2)+'% = <b>'+F.$M1(r.agV)+'</b>','Agencies use through-the-cycle cap rates, not today\'s.');
+      T.ltv=fx('LTV (lender)','Loan ÷ lender value',F.$M1(p.loan)+' ÷ '+F.$M1(r.v)+' = <b>'+P(r.ltv)+'</b>');
+      T.agltv=fx('LTV (agency)','Loan ÷ agency value',F.$M1(p.loan)+' ÷ '+F.$M1(r.agV)+' = <b>'+P(r.agltv)+'</b>','This number, not the lender\'s, drives how much subordination the bonds need.');
+      T.dscr=fx('DSCR (interest-only)','NCF ÷ (loan × coupon)',F.$M1(p.ncf)+' ÷ ('+F.$M1(p.loan)+' × '+p.cpn+'%) = <b>'+r.dscr.toFixed(2)+'x</b>');
+      K.set('views-p','The agency\'s '+P(r.agltv)+' LTV, not the lender\'s '+P(r.ltv)+', drives how much subordination this loan requires. Agencies assume through-the-cycle cap rates and haircut cash flow.');
+      T.mv=fx('Maturity value','Maturity NCF ÷ maturity cap',F.$M1(p.mncf)+' ÷ '+p.mcap.toFixed(2)+'% = <b>'+F.$M1(r.mv)+'</b>');
+      T.refi=fx('Refi capacity','Maturity NCF ÷ required debt yield',F.$M1(p.mncf)+' ÷ '+p.rdy+'% = <b>'+F.$M1(r.refi)+'</b>','Compare with the '+F.$M1(p.loan)+' balance due.');
+      T.ara=fx('Appraisal reduction amount (ARA)','Loan + unpaid amounts − 90% × new appraisal',F.$M1(p.loan)+' + '+F.$M1(p.unp)+' − 90% × '+F.$M1(r.mv)+' = <b>'+F.$M1(r.ara)+'</b>');
+      T.loss=fx('Loss &amp; severity','Loan + advances &amp; accrued − net recovery',row('Loan',F.$M1(p.loan))+row('Advances &amp; accrued',F.$M1(p.adv))+row('Net recovery ('+F.$M1(r.mv)+' less '+p.lc+'%)','('+F.$M1(r.rec)+')')+row('Loss',F.$M1(r.loss),1)+row('Severity (÷ loan)',F.P1(r.sev),1)+row('Pool loss (÷ '+F.$M1(p.pool)+')',F.P1(r.pl),1));
+      const li=[ 'In year 6 the large tenant leaves. The cash sweep has trapped ~$4M by then to help re-lease.',
+        'Re-leasing is slow. By maturity, NCF is '+F.$M1(p.mncf)+'.',
+        'At a '+p.mcap.toFixed(2)+'% cap rate, value at maturity is ~'+K.t('mv',F.$M1(r.mv))+'. A new lender needs a '+p.rdy+'% debt yield, so the most it will lend is ~'+K.t('refi',F.$M1(r.refi))+'.',
+        r.def?'The borrower can\'t refinance the '+F.$M1(p.loan)+' balance: <b>maturity default</b>.':'That covers the '+F.$M1(p.loan)+' balance, so the loan <b>refinances</b> and the steps below don\'t happen.',
+        'The special servicer orders a new appraisal. ARA = '+F.$M1(p.loan)+' + ~'+F.$M1(p.unp)+' unpaid amounts − 90% × '+F.$M1(r.mv)+' ≈ <b>'+K.t('ara',F.$M1(r.ara))+'</b>.',
+        'ASER: interest on that '+F.$M1(r.ara)+' (~'+F.$M2(r.aser)+' a year) is no longer advanced, so the unrated class takes an interest shortfall.',
+        'If liquidated: ~'+F.$M1(r.rec)+' net recovery after costs, against '+F.$M1(p.loan+p.adv)+' owed with advances, so a <b>'+K.t('loss','~'+F.$M1(r.loss)+' loss (~'+F.P0(r.sev)+' severity)')+'</b>, or '+F.P1(r.pl)+' of the pool.'];
+      K.el('stress').innerHTML=li.map(x=>'<li>'+x+'</li>').join('');
+      K.sens('sens',[['Maturity NCF $0.5M lower',{mncf:p.mncf-0.5}],['Maturity NCF $0.5M higher',{mncf:p.mncf+0.5}],['Maturity cap +50 bps',{mcap:p.mcap+0.5}],['Maturity cap –50 bps',{mcap:p.mcap-0.5}]],
+        [s=>F.$M1(s.mv),s=>s.def?F.$M1(s.loss):'refis',s=>s.def?F.P0(s.sev):'—',s=>s.def?F.P1(s.pl):'—',s=>F.$M1(s.bpl)+' ('+F.P0(s.bpl/p.bp)+')']);
+      const left=r.bpl/p.bp, keeps=left>=p.thr/100;
+      T.ctl=fx('Control test','(Unrated class − ARA) ÷ original balance vs. the '+p.thr+'% threshold','('+F.$M1(p.bp)+' − '+F.$M1(r.ara)+') ÷ '+F.$M1(p.bp)+' = <b>'+F.P0(left)+'</b>');
+      K.set('control','The '+F.$M1(r.ara)+' ARA is applied to the unrated class: '+F.$M1(p.bp)+' − '+F.$M1(r.ara)+' = '+F.$M1(r.bpl)+', or '+K.t('ctl',F.P0(left))+' of its original balance. '+(keeps?'That\'s still above the '+p.thr+'% threshold, so the B-piece keeps control of the deal.':'That\'s below the '+p.thr+'% threshold, so control shifts to the next class up: a control appraisal period.'));
+      const pre=document.querySelectorAll('#cmbs-case .presets button'); if(pre.length>1){pre[0].dataset.loss=(r.pl*100).toFixed(1); pre[1].dataset.loss=Math.min(35,r.pl*300).toFixed(1);}
+      K.sheet('sheet1',[['Loan',F.$M1(p.loan)],['Share of pool',F.P0(r.share)],['Coupon',p.cpn.toFixed(2)+'% IO'],['UW NCF',F.$M1(p.ncf)],['Debt yield',F.P1(r.dy)],['DSCR',r.dscr.toFixed(2)+'x','dscr'],['LTV / agency LTV',P(r.ltv)+' / '+P(r.agltv),'agltv']]);
+      K.sheet('sheet2',[['Maturity NCF',F.$M1(p.mncf)],['Maturity value','~'+F.$M1(r.mv),'mv'],['Refi capacity','~'+F.$M1(r.refi),'refi'],['ARA','~'+F.$M1(r.ara),'ara'],['Loss / severity',r.def?'~'+F.$M1(r.loss)+' / '+F.P0(r.sev):'none','loss'],['Pool loss',r.def?F.P1(r.pl):'0%']]);
+      K.set('verdict','<b>Takeaway:</b> '+(r.def?'irrelevant to the AAA buyer, a key driver for BBB-, and '+F.P0(r.loss/p.bp)+' of the B-piece\'s money.':'at these assumptions the loan refinances, so no bond takes a loss.'));
+    }});
+  // ---------- @end ----------
+  // ---------- @pk ----------
+  // ---------- Distressed case: live Parkway workout model ----------
+  CK.mount({key:'pk',
+    intro:'Change the appraisal, the modification terms or the exit, and the servicer\'s NPV test, the A/B structure and the exit waterfall recalculate. Hover or tap a dotted number to see how it is calculated.',
+    inputs:[['appr','As-is appraisal $M',62,1,1],['anote','A-note $M',55,1,0],['nm','Sponsor new money $M',14,0.5,0],['exit','Exit sale price $M',90,1,0],['yrs','Years to exit',3,1,1,10],['prob','Chance the plan works %',60,5,0,100],['dpo','DPO offer $M',57,0.5,0],['fc','Foreclosure net PV $M',53,0.5,0],
+      ['loan','Loan balance $M',85,1,1,null,1],['noi','NOI now $M',4.6,0.1,0,null,1],['orate','Original coupon %',4.3,0.05,0,null,1],['arate','A-note rate %',6,0.25,0,null,1],['pay','Paydown from new money $M',6,0.5,0,null,1],['pref','Sponsor pref %',8,0.5,0,null,1],['bacc','B-note accrual %',4.3,0.1,0,null,1],['dr','Servicer discount rate %',10,0.5,0,null,1],['fail','Value if the plan fails $M',50,1,0,null,1],['res','Lender share of residual %',50,5,0,100,1],['sc','Sale costs %',0,0.5,0,null,1]],
+    note:'Fixed in the model: the A-note pays current interest every year; the B-note accrues and is paid only from the sale. At exit the waterfall pays the A-note, then the sponsor\'s new money plus its compounding pref, then the B-note with accrued interest, then any residual is split. If the plan fails, the trust gets the fail value at the same date. NPVs discount at the servicer\'s rate; the paydown is received today.',
+    run(p){
+      const Y=Math.round(p.yrs), d=p.dr/100, B=p.loan-p.pay-p.anote, flags=[];
+      if(B<0) flags.push('The A-note plus the paydown exceed the loan: no B-note is needed.');
+      const ara=Math.max(0,p.loan-0.9*p.appr), dy=p.noi/p.loan, dscr=p.noi/(p.loan*p.orate/100), ltv=p.loan/p.appr;
+      const net=p.exit*(1-p.sc/100), spon=p.nm*Math.pow(1+p.pref/100,Y), Bd=Math.max(0,B)*Math.pow(1+p.bacc/100,Y);
+      const aR=Math.min(p.anote,net), sR=Math.min(spon,net-aR), bR=Math.min(Bd,net-aR-sR), resid=Math.max(0,net-aR-sR-bR);
+      const trustOK=aR+bR+resid*p.res/100, trustFail=Math.min(p.fail,p.anote+Math.max(0,B));
+      let pvInt=0; for(let y=1;y<=Y;y++) pvInt+=p.anote*p.arate/100/Math.pow(1+d,y);
+      const pvEnd=(p.prob/100*trustOK+(1-p.prob/100)*trustFail)/Math.pow(1+d,Y), mod=p.pay+pvInt+pvEnd;
+      const opts=[['A/B modification',mod],['Discounted payoff (DPO)',p.dpo],['Foreclosure / REO sale',p.fc]], best=opts.reduce((a,b)=>b[1]>a[1]?b:a);
+      const sponBack=sR+resid*(1-p.res/100), sIRR=p.nm>0?Math.pow(sponBack/p.nm,1/Y)-1:0;
+      return {Y,B,ara,dy,dscr,ltv,net,spon,Bd,aR,sR,bR,resid,trustOK,trustFail,pvInt,pvEnd,mod,opts,best,sponBack,sIRR,flags};
+    },
+    render(r,p,K){
+      const {F,fx,row,T}=K, P=x=>F.P0(x);
+      T.ara=fx('Appraisal reduction amount','Loan − 90% × new appraisal',F.$M1(p.loan)+' − 90% × '+F.$M1(p.appr)+' = <b>'+F.$M1(r.ara)+'</b>');
+      K.set('mar','Appraisal: '+F.$M1(p.appr)+' as-is. ARA ≈ '+F.$M1(p.loan)+' − 90% × '+F.$M1(p.appr)+' ≈ <b>'+K.t('ara',F.$M1(r.ara))+'</b>, which cuts interest advances on the most junior bonds.');
+      const ord=r.opts.slice().sort((a,b)=>b[1]-a[1]);
+      K.set('apr','Negotiation (Module 04). The servicer\'s NPV analysis: '+ord.map(o=>o[0].replace(' (DPO)','').replace(' / REO sale','')+' ≈ '+F.$M1(o[1])).join(' &gt; ')+'.');
+      T.mod=fx('NPV of the modification','Paydown today + PV of A-note interest + PV of the expected exit',row('Paydown today',F.$M1(p.pay))+row('PV of A-note interest ('+p.arate+'% × '+r.Y+' yrs at '+p.dr+'%)',F.$M1(r.pvInt))+row('Exit if it works ('+p.prob+'%)',F.$M1(r.trustOK))+row('Exit if it fails ('+(100-p.prob)+'%)',F.$M1(r.trustFail))+row('PV of expected exit',F.$M1(r.pvEnd))+row('NPV',F.$M1(r.mod),1));
+      K.rows('npv',r.opts.map(([n,v])=>({tot:n===r.best[0]?1:0,c:[n+(n===r.best[0]?' ✓':''),n.startsWith('A/B')?K.t('mod',F.$M1(v)):F.$M1(v),n.startsWith('A/B')?'Paydown + A-note interest + probability-weighted exit, discounted at '+p.dr+'%':n.startsWith('Disc')?'Cash today from the borrower':'Judicial foreclosure in NJ takes 1–2+ years; net of costs and carry']})));
+      K.set('npv-p','The servicer must pick the option with the highest NPV for all bondholders. '+(r.best[0].startsWith('A/B')?'Here the modification wins by '+F.$M1(r.mod-Math.max(p.dpo,p.fc))+', but only because the sponsor is putting in '+F.$M1(p.nm)+' of new money.':'At these assumptions the '+r.best[0].toLowerCase()+' beats the modification.'));
+      K.set('water','<div class="w1"><b>1 · A-note '+F.$M1(p.anote)+'</b><span>Current pay at ~'+p.arate+'%, '+r.Y+'-year extension</span></div><div class="w2"><b>2 · Sponsor new money '+F.$M1(p.nm)+' + '+p.pref+'% pref</b><span>'+F.$M1(p.pay)+' paydown + '+F.$M1(p.nm-p.pay)+' leasing reserve</span></div><div class="w3"><b>3 · B-note '+F.$M1(Math.max(0,r.B))+' (hope note)</b><span>Accrues; paid only from sale or refi proceeds</span></div><div class="w4"><b>4 · Residual</b><span>Split '+p.res+'/'+(100-p.res)+' between the lender and the sponsor</span></div>');
+      K.set('bal','Balance after paydown: '+F.$M1(p.loan)+' − '+F.$M1(p.pay)+' = '+F.$M1(p.loan-p.pay)+' = '+F.$M1(p.anote)+' A-note + '+F.$M1(Math.max(0,r.B))+' B-note. Every lever is tightened: hard lockbox, leasing approvals, a reaffirmed carve-out guaranty, and modification fees and legal costs paid by the borrower.');
+      K.rows('exitt',[{c:['Sale price'+(p.sc?' net of '+p.sc+'% costs':''),F.M1(r.net),'Year '+r.Y]},{c:['1 · A-note repaid','('+F.M1(r.aR)+')',r.aR<p.anote?'Short by '+F.$M1(p.anote-r.aR):'In full']},{c:['2 · Sponsor: new money + pref','('+F.M1(r.sR)+')',K.t('spon',F.$M1(p.nm)+' grown at '+p.pref+'% for '+r.Y+' yrs = '+F.$M1(r.spon))]},{c:['3 · B-note','('+F.M1(r.bR)+')','Owed '+F.$M1(r.Bd)+' with accrued: '+(r.Bd>0?F.P0(r.bR/r.Bd)+' recovery':'—')]},{tot:1,c:['4 · Residual',F.M1(r.resid),r.resid>0?'Split '+p.res+'/'+(100-p.res):'Nothing left']}]);
+      T.spon=fx('Sponsor payback','New money × (1 + pref)<sup>years</sup>',F.$M1(p.nm)+' × (1 + '+p.pref+'%)<sup>'+r.Y+'</sup> = <b>'+F.$M2(r.spon)+'</b>');
+      K.set('win','If the building sells for '+F.$M1(p.exit)+' in Year '+r.Y+': the A-note '+(r.aR>=p.anote?'is repaid':'recovers '+F.$M1(r.aR))+'. The sponsor gets back '+F.$M1(r.sponBack)+' on its '+F.$M1(p.nm)+' ('+F.P1(r.sIRR)+' a year). That leaves '+F.$M1(r.bR)+' for the B-note ('+F.$M1(r.Bd)+' with accrued interest), '+(r.bR>=r.Bd-0.05?'a full recovery':'a partial recovery on the hope note')+'. Without the sponsor\'s '+F.$M1(p.nm)+', the trust would likely have owned a 64%-leased REO building selling in the low $50s.');
+      K.sens('sens',[['Exit at $80M',{exit:80}],['Exit at $100M',{exit:100}],['40% chance the plan works',{prob:40}],['Sponsor puts in $10M ($4M paydown)',{nm:10,pay:4}],['Discount rate 12%',{dr:12}]],
+        [s=>F.$M1(s.mod),s=>s.best[0].replace(' (DPO)','').replace(' / REO sale',''),s=>s.Bd>0?F.P0(s.bR/s.Bd):'—',s=>F.P1(s.sIRR)]);
+      T.ltv=fx('LTV','Loan ÷ as-is appraisal',F.$M1(p.loan)+' ÷ '+F.$M1(p.appr)+' = <b>'+P(r.ltv)+'</b>');
+      T.dy=fx('Debt yield','NOI ÷ loan',F.$M1(p.noi)+' ÷ '+F.$M1(p.loan)+' = <b>'+F.P1(r.dy)+'</b>','Far below the 9–10%+ any refinancing lender wants.');
+      T.dscr=fx('DSCR','NOI ÷ interest at the original coupon',F.$M1(p.noi)+' ÷ ('+F.$M1(p.loan)+' × '+p.orate+'%) = <b>'+r.dscr.toFixed(2)+'x</b>','Covers interest, but the loan can\'t refinance: that\'s a maturity default, not a payment default.');
+      K.sheet('sheet1',[['Original loan',F.$M1(p.loan)+' CMBS'],['Occupancy','91% → 64%'],['NOI','$7.4M → '+F.$M1(p.noi)],['Appraisal',F.$M1(p.appr)],['LTV',P(r.ltv),'ltv'],['Debt yield',F.P1(r.dy),'dy'],['DSCR',r.dscr.toFixed(2)+'x','dscr']]);
+      K.sheet('sheet2',[['ARA',F.$M1(r.ara),'ara'],['Mod NPV',F.$M1(r.mod),'mod'],['A / B notes',F.$M1(p.anote)+' / '+F.$M1(Math.max(0,r.B))],['B-note recovery',r.Bd>0?F.P0(r.bR/r.Bd):'—'],['Sponsor IRR',F.P1(r.sIRR)]]);
+      K.set('verdict','<b>Resolution:</b> '+(r.best[0].startsWith('A/B')?'A/B modification with '+F.$M1(p.nm)+' of new sponsor money.':r.best[0]+' ('+F.$M1(r.best[1])+') beats the modification at these assumptions.'));
+    }});
+  // ---------- @end ----------
   // ---------- @end ----------
   // @@CASES@@
   // ---------- Light / dark toggle ----------
