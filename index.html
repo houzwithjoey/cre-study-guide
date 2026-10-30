@@ -1238,12 +1238,13 @@ html.is-dark .pager .next{color:#111118}
     <div class="panel" id="hotel-valueadd" hidden>
       <div class="memo-head">
         <div><p class="eyebrow">Case 2 · Distressed acquisition &amp; value-add</p><h2>220-key full-service REO</h2></div>
-        <span class="tag">IC memo · illustrative</span>
+        <span class="tag">IC memo · live model</span>
       </div>
       <div class="memo">
         <div class="memo-main">
           <p class="pitch">A 1989-vintage full-service hotel with 12,000 SF of meeting space and a restaurant. The prior owner couldn't fund a required PIP, so the brand terminated the franchise. Revenue collapsed, the CMBS loan defaulted, and the special servicer foreclosed. We're bidding on the REO asset.</p>
 
+          <div class="case-model" data-ck="hv"></div>
           <div class="step">
             <h3><span class="s">Step 1</span>Why did it fail?</h3>
             <ul>
@@ -1258,16 +1259,7 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 2</span>T-12 in-place performance</h3>
             <div class="tw"><table>
               <thead><tr><th>Trailing 12 months</th><th class="n">Value</th></tr></thead>
-              <tbody>
-                <tr><td>Occupancy / ADR / RevPAR</td><td class="n">52% / $128 / $66.56</td></tr>
-                <tr><td>RGI vs. comp set</td><td class="n">~59</td></tr>
-                <tr><td>Rooms / F&amp;B / other revenue ($M)</td><td class="n">5.34 / 1.80 / 0.40</td></tr>
-                <tr class="tot"><td>Total revenue ($M)</td><td class="n">7.54</td></tr>
-                <tr><td>GOP ($M, 18% margin)</td><td class="n">1.36</td></tr>
-                <tr><td>Management fee &amp; fixed charges ($M)</td><td class="n">(1.18)</td></tr>
-                <tr><td>FF&amp;E reserve ($M)</td><td class="n">(0.30)</td></tr>
-                <tr class="tot"><td>NOI ($M)</td><td class="n neg">(0.12)</td></tr>
-              </tbody>
+              <tbody id="hv-t12"></tbody>
             </table></div>
             <div class="callout"><b class="lab">Pricing a negative-NOI hotel</b>You can't apply a cap rate. Buyers price on price per key against replacement cost (a comparable new full-service hotel might cost $350k+/key) and on stabilized yield on total cost.</div>
           </div>
@@ -1283,52 +1275,34 @@ html.is-dark .pager .next{color:#111118}
             </ol>
             <div class="tw"><table>
               <thead><tr><th>Line item</th><th class="n">$M</th><th class="n">Per key</th></tr></thead>
-              <tbody>
-                <tr><td>Purchase price</td><td class="n">11.00</td><td class="n">$50k</td></tr>
-                <tr><td>Closing costs</td><td class="n">0.40</td><td class="n">$2k</td></tr>
-                <tr><td>PIP / renovation</td><td class="n">13.20</td><td class="n">$60k</td></tr>
-                <tr><td>Deferred maintenance</td><td class="n">2.00</td><td class="n">$9k</td></tr>
-                <tr><td>Contingency (10% of renovation)</td><td class="n">1.32</td><td class="n">$6k</td></tr>
-                <tr><td>Operating shortfall reserve</td><td class="n">1.00</td><td class="n">$5k</td></tr>
-                <tr><td>Financing fees &amp; interest reserve</td><td class="n">2.10</td><td class="n">$10k</td></tr>
-                <tr class="tot"><td>All-in basis</td><td class="n">31.02</td><td class="n">$141k</td></tr>
-              </tbody>
+              <tbody id="hv-basis"></tbody>
             </table></div>
-            <p>At $141k/key you own a renovated, branded, full-service hotel for well under half of replacement cost. That discount is the margin of safety.</p>
+            <p id="hv-basis-p"></p>
           </div>
 
           <div class="step">
-            <h3><span class="s">Step 4</span>Stabilized pro forma (Year 3)</h3>
+            <h3><span class="s">Step 4</span>Pro forma: T-12 to stabilization</h3>
             <div class="tw"><table>
-              <thead><tr><th></th><th class="n">T-12</th><th class="n">Yr 3 stabilized</th></tr></thead>
-              <tbody>
-                <tr><td>Occupancy</td><td class="n">52%</td><td class="n">74%</td></tr>
-                <tr><td>ADR</td><td class="n">$128</td><td class="n">$175</td></tr>
-                <tr><td>RevPAR</td><td class="n">$66.56</td><td class="n">$129.50</td></tr>
-                <tr><td>RGI</td><td class="n">~59</td><td class="n">~106</td></tr>
-                <tr><td>Total revenue ($M)</td><td class="n">7.54</td><td class="n">13.61</td></tr>
-                <tr><td>GOP margin</td><td class="n">18%</td><td class="n">37%</td></tr>
-                <tr><td>Mgmt fee / taxes &amp; insurance ($M)</td><td class="n">–</td><td class="n">(0.41) / (1.15)</td></tr>
-                <tr><td>FF&amp;E reserve ($M)</td><td class="n">(0.30)</td><td class="n">(0.54)</td></tr>
-                <tr class="tot"><td>NOI ($M)</td><td class="n neg">(0.12)</td><td class="n pos">2.94</td></tr>
-              </tbody>
+              <thead><tr><th></th><th class="n">T-12</th><th class="n">Yr 1 (reno)</th><th class="n">Yr 2</th><th class="n">Yr 3 stabilized</th></tr></thead>
+              <tbody id="hv-pf"></tbody>
             </table></div>
           </div>
 
           <div class="step">
             <h3><span class="s">Step 5</span>Financing &amp; returns</h3>
-            <p>Value-add bridge loan at 65% LTC ($20.2M, ~9% interest-only) with renovation dollars as future funding; $10.9M of equity. Year 1 is negative cash flow funded from reserves; Year 2 ramps under the new flag; Year 3 stabilizes and sells.</p>
-            <p>Stabilized yield on all-in basis = 2.94 ÷ 31.0 = <b>9.5%</b>. At a 7.75% exit cap, value is ~$37.9M ($172k/key), about $6.9M above basis. A refinance is an alternative: a 14.6% debt yield on the existing loan supports a new loan that returns most of the equity.</p>
-            <dl class="scen">
-              <div><dt>Downside · RGI ~95</dt><dd>–7.5%<small>Levered IRR · 0.79x</small></dd></div>
-              <div><dt>Base · RGI ~106</dt><dd>20.6%<small>Levered IRR · 1.75x</small></dd></div>
-              <div><dt>Upside · RGI ~113</dt><dd>33.4%<small>Levered IRR · 2.36x</small></dd></div>
-            </dl>
+            <p id="hv-ret1"></p>
+            <p id="hv-ret2"></p>
+            <dl class="scen" id="hv-scen"></dl>
+            <div id="ch-hv"></div>
           </div>
 
           <div class="step">
             <h3><span class="s">Step 6</span>Downside: what IC will challenge</h3>
-            <p>Going from RGI 59 to 106 is the whole thesis, and it's aggressive for a 1989 building. If we only reach RGI ~95, value falls below the $31.0M basis and equity loses money. The deal depends on execution: diligence must prove the brand, the operator and the renovation scope can reach fair share or better.</p>
+            <p id="hv-down"></p>
+            <div class="tw"><table>
+              <thead><tr><th>What moves the deal</th><th class="n">NOI</th><th class="n">Yield on basis</th><th class="n">Levered IRR</th><th class="n">Multiple</th></tr></thead>
+              <tbody id="hv-sens"></tbody>
+            </table></div>
             <h4 style="font-size:15px;margin:14px 0 6px">Distressed-specific diligence</h4>
             <ul>
               <li><b>Liquor license transfer</b> often isn't automatic; you may need an interim concession agreement to keep the bar open.</li>
@@ -1344,27 +1318,17 @@ html.is-dark .pager .next{color:#111118}
 
         <aside class="sheet" aria-label="Deal sheet">
           <h4>Deal sheet</h4>
-          <dl>
-            <div class="row"><dt>Keys</dt><dd>220</dd></div>
-            <div class="row"><dt>Purchase price</dt><dd>$11.0M</dd></div>
-            <div class="row"><dt>Price / key</dt><dd>$50k</dd></div>
-            <div class="row"><dt>All-in basis</dt><dd>$31.0M</dd></div>
-            <div class="row"><dt>Basis / key</dt><dd>$141k</dd></div>
-            <div class="row"><dt>vs. replacement</dt><dd>~60% below</dd></div>
-          </dl>
+          <dl id="hv-sheet1"></dl>
           <h4 class="grp">Stabilized</h4>
-          <dl>
-            <div class="row"><dt>RevPAR / RGI</dt><dd>$129.50 / 106</dd></div>
-            <div class="row"><dt>NOI</dt><dd>$2.94M</dd></div>
-            <div class="row"><dt>Yield on basis</dt><dd>9.5%</dd></div>
-            <div class="row"><dt>Exit cap</dt><dd>7.75%</dd></div>
-            <div class="row"><dt>Levered IRR</dt><dd>20.6%</dd></div>
-            <div class="row"><dt>Equity multiple</dt><dd>1.75x</dd></div>
-          </dl>
-          <p class="verdict"><b>Verdict:</b> strong basis, but it only works if the rebrand reaches fair share (RGI ≥ ~100).</p>
+          <dl id="hv-sheet2"></dl>
+          <p class="verdict" id="hv-verdict"></p>
         </aside>
       </div>
     </div>
+
+
+
+
 
     <!-- HOTEL DRILLS -->
     <div class="panel" id="hotel-drills" hidden>
@@ -2060,12 +2024,13 @@ html.is-dark .pager .next{color:#111118}
     <div class="panel" id="industrial-valueadd" hidden>
       <div class="memo-head">
         <div><p class="eyebrow">Case 2 · Value-add acquisition</p><h2>220,000 SF 1980s infill warehouse</h2></div>
-        <span class="tag">IC memo · illustrative</span>
+        <span class="tag">IC memo · live model</span>
       </div>
       <div class="memo">
         <div class="memo-main">
           <p class="pitch">A 1980s-vintage, 220,000 SF multi-tenant warehouse on 10 acres, 15 minutes from a dense metro core. It's 85% leased to five tenants at an average $8.50 NNN, on leases signed years ago. Renovated buildings nearby lease at $14.50. The owner deferred capital for a decade. Specs are dated: 24' clear, 110' truck courts, older sprinklers.</p>
 
+          <div class="case-model" data-ck="iv"></div>
           <div class="step">
             <h3><span class="s">Step 1</span>Why buy an obsolete box?</h3>
             <ul>
@@ -2080,14 +2045,9 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 2</span>In-place financials</h3>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
-              <tbody>
-                <tr><td>Leased: 187,000 SF × $8.50 NNN</td><td class="n">1.59</td></tr>
-                <tr><td>Lost recoveries on 33,000 SF vacant (~$3.00/SF)</td><td class="n">(0.10)</td></tr>
-                <tr><td>Non-recoverable expenses</td><td class="n">(0.05)</td></tr>
-                <tr class="tot"><td>In-place NOI</td><td class="n">1.44</td></tr>
-              </tbody>
+              <tbody id="iv-inplace"></tbody>
             </table></div>
-            <p>Purchase price: <b>$32.0M ($145/SF)</b>, a <b>4.5% going-in cap</b>. That's below the debt cost, so the deal has negative leverage on day one. Buyers accept it because they're paying for rent growth: WALT is only ~2 years, so most leases roll soon.</p>
+            <p id="iv-price"></p>
           </div>
 
           <div class="step">
@@ -2106,50 +2066,35 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 4</span>All-in basis</h3>
             <div class="tw"><table>
               <thead><tr><th>Line item</th><th class="n">$M</th><th class="n">Per SF</th></tr></thead>
-              <tbody>
-                <tr><td>Purchase price</td><td class="n">32.0</td><td class="n">$145</td></tr>
-                <tr><td>Closing costs</td><td class="n">0.9</td><td class="n">$4</td></tr>
-                <tr><td>Base building capex (roof, sprinklers, docks, paving, LED, cosmetics)</td><td class="n">6.8</td><td class="n">$31</td></tr>
-                <tr><td>Contingency (~10% of capex)</td><td class="n">0.7</td><td class="n">$3</td></tr>
-                <tr><td>TI on rollover (~$6/SF)</td><td class="n">1.3</td><td class="n">$6</td></tr>
-                <tr><td>Leasing commissions</td><td class="n">1.4</td><td class="n">$6</td></tr>
-                <tr><td>Downtime &amp; free rent carry</td><td class="n">1.2</td><td class="n">$5</td></tr>
-                <tr><td>Financing fees &amp; interest reserve</td><td class="n">1.8</td><td class="n">$8</td></tr>
-                <tr class="tot"><td>All-in basis</td><td class="n">46.1</td><td class="n">~$210</td></tr>
-              </tbody>
+              <tbody id="iv-basis"></tbody>
             </table></div>
             <p>Replacement cost is roughly $275+/SF (infill land at ~$3M/acre plus a new building), and the zoning likely wouldn't allow a new one anyway.</p>
           </div>
 
           <div class="step">
-            <h3><span class="s">Step 5</span>Stabilized NOI (Year 4)</h3>
+            <h3><span class="s">Step 5</span>Stabilized NOI</h3>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">In-place</th><th class="n">Stabilized</th></tr></thead>
-              <tbody>
-                <tr><td>Leased</td><td class="n">85%</td><td class="n">95%</td></tr>
-                <tr><td>Average rent (NNN)</td><td class="n">$8.50</td><td class="n">$14.50</td></tr>
-                <tr><td>Base rent ($M)</td><td class="n">1.59</td><td class="n">3.03</td></tr>
-                <tr><td>Lost recoveries &amp; non-recoverable ($M)</td><td class="n">(0.15)</td><td class="n">(0.11)</td></tr>
-                <tr class="tot"><td>NOI ($M)</td><td class="n">1.44</td><td class="n pos">2.92</td></tr>
-              </tbody>
+              <tbody id="iv-noi"></tbody>
             </table></div>
-            <p>NOI roughly doubles, almost entirely from rent. Capex is a fraction of what the same uplift would cost in office.</p>
+            <p id="iv-noi-p"></p>
           </div>
 
           <div class="step">
             <h3><span class="s">Step 6</span>Returns</h3>
-            <p>Stabilized yield on basis = 2.92 ÷ 46.1 = <b>6.3%</b>. At a 5.0% exit cap, value is ~$58.4M ($265/SF), about $12.3M (27%) above basis.</p>
-            <p>Financing: a bridge loan at 60% LTC ($27.7M, ~7%) with capex and leasing costs as future funding. Equity $18.4M. Early years run near break-even after interest; most of the return comes at sale.</p>
-            <dl class="scen">
-              <div><dt>Downside</dt><dd>~1.0x<small>$13.00 rents, 5.5% exit cap</small></dd></div>
-              <div><dt>Base</dt><dd>~15%<small>Levered IRR · ~1.7x · 4 years</small></dd></div>
-              <div><dt>Break-even NOI</dt><dd>~$2.3M<small>Value = basis at 5.0%</small></dd></div>
-            </dl>
+            <p id="iv-ret1"></p>
+            <p id="iv-ret2"></p>
+            <dl class="scen" id="iv-scen"></dl>
+            <div id="ch-iv"></div>
           </div>
 
           <div class="step">
             <h3><span class="s">Step 7</span>Risks &amp; diligence</h3>
-            <p>If market rents soften to $13.00 and buyers demand a 5.5% cap, value is ~$47M, roughly the basis. The thesis depends on market rent holding, so diligence focuses on what tenants will really pay for a 24' building.</p>
+            <p id="iv-down"></p>
+            <div class="tw"><table>
+              <thead><tr><th>What moves the deal</th><th class="n">NOI</th><th class="n">Value</th><th class="n">Levered IRR</th><th class="n">Multiple</th></tr></thead>
+              <tbody id="iv-sens"></tbody>
+            </table></div>
             <ul>
               <li><b>Rent comps for comparable specs:</b> renovated 1980s buildings, not new 36' product.</li>
               <li><b>Tenant-by-tenant rollover:</b> who renews, who leaves, and how long each suite sits empty.</li>
@@ -2158,34 +2103,23 @@ html.is-dark .pager .next{color:#111118}
               <li><b>Physical:</b> roof, slab condition, sprinkler capacity, power and the stormwater system.</li>
               <li><b>Alternative use:</b> IOS or redevelopment value of the land as a floor.</li>
             </ul>
-            <div class="callout"><b class="lab">Credit lens</b>On in-place NOI, the loan's debt yield is only ~5.2%, so a bank won't lend on today's income. That's why this is a bridge loan sized to the business plan, with future funding and leasing tests. At stabilization the debt yield is ~10.5%, which supports a permanent refinance.</div>
+            <div class="callout"><b class="lab">Credit lens</b><span id="iv-credit"></span></div>
           </div>
         </div>
 
         <aside class="sheet" aria-label="Deal sheet">
           <h4>Deal sheet</h4>
-          <dl>
-            <div class="row"><dt>Size</dt><dd>220,000 SF</dd></div>
-            <div class="row"><dt>Clear height</dt><dd>24'</dd></div>
-            <div class="row"><dt>Purchase price</dt><dd>$32.0M</dd></div>
-            <div class="row"><dt>Price / SF</dt><dd>$145</dd></div>
-            <div class="row"><dt>Going-in cap</dt><dd>4.5%</dd></div>
-            <div class="row"><dt>All-in basis</dt><dd>$46.1M</dd></div>
-            <div class="row"><dt>Mark-to-market</dt><dd>~71%</dd></div>
-          </dl>
+          <dl id="iv-sheet1"></dl>
           <h4 class="grp">Stabilized</h4>
-          <dl>
-            <div class="row"><dt>Leased / rent</dt><dd>95% / $14.50</dd></div>
-            <div class="row"><dt>NOI</dt><dd>$2.92M</dd></div>
-            <div class="row"><dt>Yield on basis</dt><dd>6.3%</dd></div>
-            <div class="row"><dt>Exit cap</dt><dd>5.0%</dd></div>
-            <div class="row"><dt>Value</dt><dd>~$58.4M</dd></div>
-            <div class="row"><dt>Levered IRR</dt><dd>~15%</dd></div>
-          </dl>
-          <p class="verdict"><b>Verdict:</b> a location and mark-to-market bet. Works if market rents hold for older product.</p>
+          <dl id="iv-sheet2"></dl>
+          <p class="verdict" id="iv-verdict"></p>
         </aside>
       </div>
     </div>
+
+
+
+
 
     <!-- DATA CENTER -->
     <div class="panel" id="industrial-datacenter" hidden>
@@ -2564,12 +2498,13 @@ html.is-dark .pager .next{color:#111118}
     <div class="panel" id="retail-valueadd" hidden>
       <div class="memo-head">
         <div><p class="eyebrow">Case 2 · Distressed acquisition, reposition &amp; long-term hold</p><h2>280,000 SF community center</h2></div>
-        <span class="tag">IC memo · illustrative</span>
+        <span class="tag">IC memo · live model</span>
       </div>
       <div class="memo">
         <div class="memo-main">
           <p class="pitch">A 1990s community center on 28 acres at a busy suburban intersection. Two anchors went bankrupt, leaving a 60,000 SF and a 45,000 SF box dark. Co-tenancy clauses let several shop tenants cut their rent, and the center is now 55% leased. The CMBS loan defaulted and the special servicer is selling the property. Our plan is to re-anchor, lease up, and hold it long term for steady cash flow.</p>
 
+          <div class="case-model" data-ck="rv"></div>
           <div class="step">
             <h3><span class="s">Step 1</span>Is the real estate still good?</h3>
             <ul>
@@ -2584,15 +2519,9 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 2</span>In-place financials</h3>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
-              <tbody>
-                <tr><td>Leased: 154,000 SF, avg ~$12 base rent</td><td class="n">1.85</td></tr>
-                <tr><td>Co-tenancy rent reductions</td><td class="n">(0.15)</td></tr>
-                <tr><td>Lost recoveries on 126,000 SF vacant (~$5.50/SF)</td><td class="n">(0.69)</td></tr>
-                <tr><td>Non-recoverable expenses</td><td class="n">(0.15)</td></tr>
-                <tr class="tot"><td>In-place NOI</td><td class="n">0.86</td></tr>
-              </tbody>
+              <tbody id="rv-inplace"></tbody>
             </table></div>
-            <p>Purchase price: <b>$21.0M ($75/SF)</b>, a 4.1% cap on depressed income. Replacement cost is ~$300/SF. Like the distressed office and hotel, this is priced on basis, not current NOI.</p>
+            <p id="rv-price"></p>
           </div>
 
           <div class="step">
@@ -2611,39 +2540,17 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 4</span>All-in basis</h3>
             <div class="tw"><table>
               <thead><tr><th>Line item</th><th class="n">$M</th><th class="n">Per SF</th></tr></thead>
-              <tbody>
-                <tr><td>Purchase price</td><td class="n">21.0</td><td class="n">$75</td></tr>
-                <tr><td>Closing costs</td><td class="n">0.8</td><td class="n">$3</td></tr>
-                <tr><td>Facade, signage, lot, box demising, pad site work</td><td class="n">6.9</td><td class="n">$25</td></tr>
-                <tr><td>Contingency (10% of hard)</td><td class="n">0.7</td><td class="n">$3</td></tr>
-                <tr><td>TI &amp; landlord work (grocer $70, medical $90, fitness $40, off-price $30, shops $40)</td><td class="n">6.9</td><td class="n">$25</td></tr>
-                <tr><td>Leasing commissions</td><td class="n">2.0</td><td class="n">$7</td></tr>
-                <tr><td>Carry &amp; co-tenancy shortfall during lease-up</td><td class="n">1.8</td><td class="n">$6</td></tr>
-                <tr><td>Financing fees &amp; interest reserve</td><td class="n">2.2</td><td class="n">$8</td></tr>
-                <tr class="tot"><td>All-in basis</td><td class="n">42.3</td><td class="n">$151</td></tr>
-              </tbody>
+              <tbody id="rv-basis"></tbody>
             </table></div>
           </div>
 
           <div class="step">
-            <h3><span class="s">Step 5</span>Stabilized NOI (Year 4)</h3>
+            <h3><span class="s">Step 5</span>Stabilized NOI</h3>
             <div class="tw"><table>
               <thead><tr><th>Tenancy</th><th class="n">SF</th><th class="n">Rent</th><th class="n">$M</th></tr></thead>
-              <tbody>
-                <tr><td>Existing tenants (co-tenancy cured)</td><td class="n">154,000</td><td class="n">$13.00</td><td class="n">2.00</td></tr>
-                <tr><td>Grocer (20-yr lease)</td><td class="n">45,000</td><td class="n">$14.00</td><td class="n">0.63</td></tr>
-                <tr><td>Urgent care / medical</td><td class="n">15,000</td><td class="n">$26.00</td><td class="n">0.39</td></tr>
-                <tr><td>Fitness</td><td class="n">30,000</td><td class="n">$13.00</td><td class="n">0.39</td></tr>
-                <tr><td>Off-price</td><td class="n">15,000</td><td class="n">$15.00</td><td class="n">0.23</td></tr>
-                <tr><td>New shop leases</td><td class="n">12,000</td><td class="n">$24.00</td><td class="n">0.29</td></tr>
-                <tr><td>3 pad ground leases</td><td class="n">–</td><td class="n">$120k each</td><td class="n">0.36</td></tr>
-                <tr class="tot"><td>Base rent (~97% leased)</td><td class="n">271,000</td><td></td><td class="n">4.29</td></tr>
-                <tr><td>Credit loss reserve (3%)</td><td></td><td></td><td class="n">(0.13)</td></tr>
-                <tr><td>CAM caps, vacancy leakage &amp; reserves</td><td></td><td></td><td class="n">(0.27)</td></tr>
-                <tr class="tot"><td>Stabilized NOI</td><td></td><td></td><td class="n pos">3.89</td></tr>
-              </tbody>
+              <tbody id="rv-roll"></tbody>
             </table></div>
-            <p>Yield on all-in basis = 3.89 ÷ 42.3 = <b>9.2%</b>. At a 7.0% cap, the stabilized center is worth ~$55.5M ($198/SF), ~$13.2M above basis.</p>
+            <p id="rv-yob"></p>
           </div>
 
           <div class="step">
@@ -2651,27 +2558,21 @@ html.is-dark .pager .next{color:#111118}
             <p>The goal is steady cash flow, so at stabilization we replace the bridge loan with long-term fixed-rate debt and keep the asset.</p>
             <div class="tw"><table>
               <thead><tr><th>Refinance at stabilization</th><th class="n">Value</th></tr></thead>
-              <tbody>
-                <tr><td>Bridge loan repaid (60% LTC, ~8%)</td><td class="n">$25.4M</td></tr>
-                <tr><td>New permanent loan: 60% LTV, 10-yr fixed ~6.25%, 30-yr amortization</td><td class="n">$33.3M</td></tr>
-                <tr><td>Cash returned to equity</td><td class="n">~$7.5M (~45% of $16.9M)</td></tr>
-                <tr><td>Annual debt service</td><td class="n">$2.46M</td></tr>
-                <tr><td>DSCR / debt yield</td><td class="n">1.58x / 11.7%</td></tr>
-                <tr><td>Cash flow after debt service &amp; reserves</td><td class="n">~$1.3M/yr, growing</td></tr>
-              </tbody>
+              <tbody id="rv-refi"></tbody>
             </table></div>
-            <dl class="scen">
-              <div><dt>Sell at Year 4</dt><dd>~18%<small>Levered IRR · ~1.9x</small></dd></div>
-              <div><dt>Refi &amp; hold 10 yrs</dt><dd>~16%<small>Levered IRR · ~3.0x</small></dd></div>
-              <div><dt>Downside</dt><dd>&lt; basis<small>No grocer: NOI ~$3.0M, 7.5% cap</small></dd></div>
-            </dl>
-            <p>Holding gives up a little IRR for a much bigger equity multiple and years of predictable cash. That trade fits a long-term owner such as a family office, a REIT or your own future platform. What makes the long hold work:</p>
+            <dl class="scen" id="rv-scen"></dl>
+            <div id="ch-rv"></div>
+            <p>Holding gives up some IRR for a much bigger equity multiple and years of predictable cash. That trade fits a long-term owner such as a family office, a REIT or your own future platform. What makes the long hold work:</p>
             <ul>
               <li><b>Long anchor term.</b> The grocer's 20-year lease runs past the loan maturity, which lenders want to see.</li>
               <li><b>Necessity tenant mix.</b> Grocery, medical, fitness, food and services are less exposed to e-commerce.</li>
               <li><b>Built-in growth.</b> 3% shop bumps, percentage rent from strong tenants, and mark-to-market as older shop leases roll.</li>
               <li><b>Future options.</b> More pads, or residential on the remaining excess parking, years from now.</li>
             </ul>
+            <div class="tw"><table>
+              <thead><tr><th>What moves the deal</th><th class="n">NOI</th><th class="n">Sell IRR</th><th class="n">Hold IRR</th><th class="n">Hold multiple</th></tr></thead>
+              <tbody id="rv-sens"></tbody>
+            </table></div>
           </div>
 
           <div class="step">
@@ -2687,43 +2588,34 @@ html.is-dark .pager .next{color:#111118}
             </ul>
             <div class="callout"><b class="lab">Credit lens</b>A bridge lender sizes off the business plan and holds TI and capex as future funding, released as leases are signed. The permanent lender then focuses on anchor lease term relative to the loan, co-tenancy exposure and the share of income from national vs. local tenants.</div>
           </div>
-        </div>
+          </div>
 
         <aside class="sheet" aria-label="Deal sheet">
           <h4>Deal sheet</h4>
-          <dl>
-            <div class="row"><dt>GLA</dt><dd>280,000 SF</dd></div>
-            <div class="row"><dt>In-place leased</dt><dd>55%</dd></div>
-            <div class="row"><dt>Purchase price</dt><dd>$21.0M</dd></div>
-            <div class="row"><dt>Price / SF</dt><dd>$75</dd></div>
-            <div class="row"><dt>All-in basis</dt><dd>$42.3M</dd></div>
-            <div class="row"><dt>Basis / SF</dt><dd>$151</dd></div>
-          </dl>
+          <dl id="rv-sheet1"></dl>
           <h4 class="grp">Stabilized</h4>
-          <dl>
-            <div class="row"><dt>Leased</dt><dd>~97%</dd></div>
-            <div class="row"><dt>NOI</dt><dd>$3.89M</dd></div>
-            <div class="row"><dt>Yield on basis</dt><dd>9.2%</dd></div>
-            <div class="row"><dt>Value (7.0%)</dt><dd>~$55.5M</dd></div>
-            <div class="row"><dt>Perm DSCR</dt><dd>1.58x</dd></div>
-            <div class="row"><dt>Hold IRR / EM</dt><dd>~16% / ~3.0x</dd></div>
-          </dl>
-          <p class="verdict"><b>Verdict:</b> the grocer is the whole thesis. Sign it before closing, or price the deal as if it won't come.</p>
+          <dl id="rv-sheet2"></dl>
+          <p class="verdict" id="rv-verdict"></p>
         </aside>
       </div>
     </div>
+
+
+
+
 
 
     <!-- RETAIL CASE 3 -->
     <div class="panel" id="retail-sell" hidden>
       <div class="memo-head">
         <div><p class="eyebrow">Case 3 · Distressed acquisition, re-anchor &amp; sell</p><h2>150,000 SF neighborhood center with a dark grocer box</h2></div>
-        <span class="tag">IC memo · illustrative</span>
+        <span class="tag">IC memo · live model</span>
       </div>
       <div class="memo">
         <div class="memo-main">
           <p class="pitch">A 1980s neighborhood center on 16 acres in a dense, middle-income suburb. Its grocer closed after a chain merger, leaving a 55,000 SF box dark. Shop tenants used co-tenancy clauses to cut their rent, and the center is now 38% leased. The owner is out of money and the lender wants out. Unlike Case 2, our plan is a merchant strategy: fix it fast, then sell to a long-term buyer.</p>
 
+          <div class="case-model" data-ck="rs"></div>
           <div class="step">
             <h3><span class="s">Step 1</span>Why sell instead of hold?</h3>
             <ul>
@@ -2738,15 +2630,9 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 2</span>In-place financials</h3>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
-              <tbody>
-                <tr><td>Leased shops: 57,000 SF × $16</td><td class="n">0.91</td></tr>
-                <tr><td>Co-tenancy rent reductions</td><td class="n">(0.10)</td></tr>
-                <tr><td>Lost recoveries on 93,000 SF vacant (~$5/SF)</td><td class="n">(0.47)</td></tr>
-                <tr><td>Non-recoverable expenses</td><td class="n">(0.10)</td></tr>
-                <tr class="tot"><td>In-place NOI</td><td class="n">0.25</td></tr>
-              </tbody>
+              <tbody id="rs-inplace"></tbody>
             </table></div>
-            <p>Purchase price: <b>$10.5M ($70/SF)</b>, a 2.4% cap on in-place NOI. We're paying for the land, the location and the grocer box.</p>
+            <p id="rs-price"></p>
           </div>
 
           <div class="step">
@@ -2765,89 +2651,51 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 4</span>All-in basis</h3>
             <div class="tw"><table>
               <thead><tr><th>Line item</th><th class="n">$M</th></tr></thead>
-              <tbody>
-                <tr><td>Purchase price</td><td class="n">10.50</td></tr>
-                <tr><td>Closing costs</td><td class="n">0.40</td></tr>
-                <tr><td>Facade, lot, signage &amp; pad site work</td><td class="n">3.00</td></tr>
-                <tr><td>Contingency</td><td class="n">0.40</td></tr>
-                <tr><td>Grocer landlord work (54,000 SF × $60)</td><td class="n">3.24</td></tr>
-                <tr><td>Shop TI (25,000 SF × $35)</td><td class="n">0.88</td></tr>
-                <tr><td>Leasing commissions</td><td class="n">0.90</td></tr>
-                <tr><td>Carry during lease-up</td><td class="n">1.00</td></tr>
-                <tr><td>Financing fees &amp; interest reserve</td><td class="n">1.00</td></tr>
-                <tr class="tot"><td>Gross basis</td><td class="n">21.30</td></tr>
-                <tr><td>Less: two pad sales</td><td class="n">(3.20)</td></tr>
-                <tr class="tot"><td>Net basis</td><td class="n">18.10 ($121/SF)</td></tr>
-              </tbody>
+              <tbody id="rs-basis"></tbody>
             </table></div>
           </div>
 
           <div class="step">
-            <h3><span class="s">Step 5</span>Stabilized NOI (Year 3)</h3>
+            <h3><span class="s">Step 5</span>Stabilized NOI</h3>
             <div class="tw"><table>
               <thead><tr><th>Tenancy</th><th class="n">SF</th><th class="n">Rent</th><th class="n">$M</th></tr></thead>
-              <tbody>
-                <tr><td>New grocer (15 yrs)</td><td class="n">54,000</td><td class="n">$12</td><td class="n">0.65</td></tr>
-                <tr><td>Existing shops (co-tenancy cured)</td><td class="n">57,000</td><td class="n">$17</td><td class="n">0.97</td></tr>
-                <tr><td>New shop leases</td><td class="n">25,000</td><td class="n">$22</td><td class="n">0.55</td></tr>
-                <tr class="tot"><td>Base rent (91% leased)</td><td class="n">136,000</td><td></td><td class="n">2.17</td></tr>
-                <tr><td>Credit loss reserve (3%)</td><td></td><td></td><td class="n">(0.07)</td></tr>
-                <tr><td>Vacancy leakage, grocer CAM cap, non-recoverables</td><td></td><td></td><td class="n">(0.18)</td></tr>
-                <tr class="tot"><td>Stabilized NOI</td><td></td><td></td><td class="n pos">1.92</td></tr>
-              </tbody>
+              <tbody id="rs-roll"></tbody>
             </table></div>
-            <p>Yield on net basis = 1.92 ÷ 18.1 = <b>10.6%</b>.</p>
+            <p id="rs-yob"></p>
           </div>
 
           <div class="step">
             <h3><span class="s">Step 6</span>The sale</h3>
-            <p>At a 7.25% cap, a buyer pays ~<b>$26.5M ($177/SF)</b>. After ~2% selling costs, that's ~$7.9M above our net basis. The buyer gets a ~7.25% yield on a re-anchored center; we capture the spread between our 10.6% yield on cost and their 7.25% purchase cap.</p>
-            <p>Financing: bridge loan at 60% LTC ($12.8M, ~8.5%), with the pad sale proceeds used to pay it down to ~$9.6M. Equity $8.5M.</p>
-            <dl class="scen">
-              <div><dt>Downside</dt><dd>~1.0x<small>Grocer falls through; sell as value-add at a 9% cap</small></dd></div>
-              <div><dt>Base · sell Yr 3</dt><dd>~29%<small>Levered IRR · ~2.1x</small></dd></div>
-              <div><dt>Compare: Case 2 hold</dt><dd>~16%<small>Lower IRR, higher total dollars</small></dd></div>
-            </dl>
+            <p id="rs-sale1"></p>
+            <p id="rs-sale2"></p>
+            <dl class="scen" id="rs-scen"></dl>
+            <div id="ch-rs"></div>
             <div class="callout"><b class="lab">What buyers want to see before paying a core price</b>The grocer open and reporting sales (ideally 6–12 months), signed estoppels from every major tenant, a clean CAM reconciliation, co-tenancy cured, and a long anchor term. Selling before these are in place means a higher cap rate and a lower price.</div>
           </div>
 
           <div class="step">
             <h3><span class="s">Step 7</span>Timing the exit</h3>
             <div class="tw"><table>
-              <thead><tr><th>Sell when...</th><th>Price</th><th>Trade-off</th></tr></thead>
-              <tbody>
-                <tr><td>Grocer lease signed, not open</td><td>Value-add buyer, ~8.5% cap</td><td>Earliest exit, much lower price</td></tr>
-                <tr><td>Grocer open, shops leasing</td><td>~7.75% cap</td><td>Some buyers will wait for sales data</td></tr>
-                <tr><td>Grocer open 12 months, 91% leased</td><td>Core buyer, ~7.25% cap</td><td>Base case: best price, ~3-year hold</td></tr>
-                <tr><td>Hold long term</td><td>Refinance instead</td><td>See Case 2: lower IRR, more total profit</td></tr>
-              </tbody>
+              <thead><tr><th>Sell when...</th><th class="n">Month</th><th class="n">Cap</th><th class="n">Price</th><th class="n">Levered IRR</th><th class="n">Multiple</th></tr></thead>
+              <tbody id="rs-exit"></tbody>
             </table></div>
+            <p>Selling earlier returns capital sooner but at a higher cap rate; waiting for sales data earns the core price. Holding long term is Case 2: lower IRR, more total profit.</p>
           </div>
         </div>
 
         <aside class="sheet" aria-label="Deal sheet">
           <h4>Deal sheet</h4>
-          <dl>
-            <div class="row"><dt>GLA</dt><dd>150,000 SF</dd></div>
-            <div class="row"><dt>In-place leased</dt><dd>38%</dd></div>
-            <div class="row"><dt>Purchase price</dt><dd>$10.5M</dd></div>
-            <div class="row"><dt>Price / SF</dt><dd>$70</dd></div>
-            <div class="row"><dt>Net basis</dt><dd>$18.1M</dd></div>
-            <div class="row"><dt>Pad sales</dt><dd>$3.2M</dd></div>
-          </dl>
+          <dl id="rs-sheet1"></dl>
           <h4 class="grp">Exit</h4>
-          <dl>
-            <div class="row"><dt>Leased</dt><dd>91%</dd></div>
-            <div class="row"><dt>NOI</dt><dd>$1.92M</dd></div>
-            <div class="row"><dt>Yield on basis</dt><dd>10.6%</dd></div>
-            <div class="row"><dt>Sale cap</dt><dd>7.25%</dd></div>
-            <div class="row"><dt>Sale price</dt><dd>~$26.5M</dd></div>
-            <div class="row"><dt>Levered IRR</dt><dd>~29%</dd></div>
-          </dl>
-          <p class="verdict"><b>Verdict:</b> a high-IRR merchant play that depends entirely on signing the grocer.</p>
+          <dl id="rs-sheet2"></dl>
+          <p class="verdict" id="rs-verdict"></p>
         </aside>
       </div>
     </div>
+
+
+
+
 
     <!-- RETAIL DRILLS -->
     <div class="panel" id="retail-drills" hidden>
@@ -4340,12 +4188,13 @@ html.is-dark .pager .next{color:#111118}
     <div class="panel" id="multifamily-valueadd" hidden>
       <div class="memo-head">
         <div><p class="eyebrow">Case 3 · Distressed acquisition, value-add &amp; long-term hold</p><h2>240-unit 1970s garden complex</h2></div>
-        <span class="tag">IC memo · illustrative</span>
+        <span class="tag">IC memo · live model</span>
       </div>
       <div class="memo">
         <div class="memo-main">
           <p class="pitch">A 1970s Class C garden community in a growing suburb. The prior owner bought it in 2021 with a floating-rate bridge loan. When rates rose and the rate cap expired, they ran out of cash, stopped maintenance and lost control of operations. Occupancy is 78%, delinquency is 10%, and 20 units are down. The lender is selling the loan. Our plan is to fix it and hold it for steady rental income.</p>
 
+          <div class="case-model" data-ck="mv"></div>
           <div class="step">
             <h3><span class="s">Step 1</span>Diagnose before you price</h3>
             <ul>
@@ -4360,18 +4209,9 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 2</span>In-place financials</h3>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
-              <tbody>
-                <tr><td>Gross potential rent: 240 × $1,350 × 12</td><td class="n">3.89</td></tr>
-                <tr><td>Vacancy (22%, incl. down units)</td><td class="n">(0.86)</td></tr>
-                <tr><td>Bad debt &amp; concessions</td><td class="n">(0.35)</td></tr>
-                <tr><td>Other income</td><td class="n">0.12</td></tr>
-                <tr class="tot"><td>EGI</td><td class="n">2.80</td></tr>
-                <tr><td>Operating expenses ($8,500/unit, inflated by emergency repairs)</td><td class="n">(2.04)</td></tr>
-                <tr><td>Management (4%)</td><td class="n">(0.11)</td></tr>
-                <tr class="tot"><td>In-place NOI</td><td class="n">0.65</td></tr>
-              </tbody>
+              <tbody id="mv-inplace"></tbody>
             </table></div>
-            <p>Purchase price: <b>$28.0M ($117k/unit)</b>, a 2.3% cap on in-place NOI. Replacement cost is $300k+ per unit.</p>
+            <p id="mv-price"></p>
           </div>
 
           <div class="step">
@@ -4385,17 +4225,7 @@ html.is-dark .pager .next{color:#111118}
             </ol>
             <div class="tw"><table>
               <thead><tr><th>Line item</th><th class="n">$M</th><th class="n">Per unit</th></tr></thead>
-              <tbody>
-                <tr><td>Purchase price</td><td class="n">28.00</td><td class="n">$117k</td></tr>
-                <tr><td>Closing costs</td><td class="n">0.70</td><td class="n">$3k</td></tr>
-                <tr><td>Deferred maintenance &amp; life safety</td><td class="n">3.60</td><td class="n">$15k</td></tr>
-                <tr><td>Interior renovations (240 × $14k)</td><td class="n">3.36</td><td class="n">$14k</td></tr>
-                <tr><td>Exterior &amp; amenities</td><td class="n">1.50</td><td class="n">$6k</td></tr>
-                <tr><td>Contingency (~10%)</td><td class="n">0.85</td><td class="n">$4k</td></tr>
-                <tr><td>Operating shortfall during turnaround</td><td class="n">1.20</td><td class="n">$5k</td></tr>
-                <tr><td>Financing fees &amp; rate cap</td><td class="n">1.00</td><td class="n">$4k</td></tr>
-                <tr class="tot"><td>All-in basis</td><td class="n">40.21</td><td class="n">$168k</td></tr>
-              </tbody>
+              <tbody id="mv-budget"></tbody>
             </table></div>
           </div>
 
@@ -4420,90 +4250,60 @@ html.is-dark .pager .next{color:#111118}
           </div>
 
           <div class="step">
-            <h3><span class="s">Step 5</span>Stabilized NOI (Year 3)</h3>
+            <h3><span class="s">Step 5</span>Stabilized NOI</h3>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">In-place</th><th class="n">Stabilized</th></tr></thead>
-              <tbody>
-                <tr><td>Average rent</td><td class="n">$1,350</td><td class="n">$1,650</td></tr>
-                <tr><td>Physical occupancy</td><td class="n">78%</td><td class="n">94%</td></tr>
-                <tr><td>GPR ($M)</td><td class="n">3.89</td><td class="n">4.75</td></tr>
-                <tr><td>Vacancy, bad debt, concessions ($M)</td><td class="n">(1.21)</td><td class="n">(0.38)</td></tr>
-                <tr><td>Other income incl. RUBS ($M)</td><td class="n">0.12</td><td class="n">0.26</td></tr>
-                <tr class="tot"><td>EGI ($M)</td><td class="n">2.80</td><td class="n">4.63</td></tr>
-                <tr><td>Opex, management &amp; reserves ($M)</td><td class="n">(2.15)</td><td class="n">(1.91)</td></tr>
-                <tr class="tot"><td>NOI ($M)</td><td class="n">0.65</td><td class="n pos">2.72</td></tr>
-              </tbody>
+              <tbody id="mv-noi"></tbody>
             </table></div>
-            <p>Yield on all-in basis = 2.72 ÷ 40.2 = <b>6.8%</b>. At a 5.75% cap, the stabilized property is worth ~$47.3M ($197k/unit), ~$7M above basis.</p>
+            <p id="mv-yob"></p>
           </div>
 
           <div class="step">
             <h3><span class="s">Step 6</span>Long-term hold with agency debt</h3>
-            <p>Bridge loan at 70% LTC ($28.1M, floating ~8%) funds the turnaround. At stabilization, refinance into a 10-year fixed agency loan and keep the property.</p>
+            <p id="mv-bridge"></p>
             <div class="tw"><table>
               <thead><tr><th>Agency refinance</th><th class="n">Value</th></tr></thead>
-              <tbody>
-                <tr><td>New loan: 60% LTV, fixed ~5.75%, 30-year amortization</td><td class="n">$28.4M</td></tr>
-                <tr><td>Repays bridge loan</td><td class="n">$28.1M</td></tr>
-                <tr><td>Annual debt service</td><td class="n">$1.99M</td></tr>
-                <tr><td>DSCR</td><td class="n">1.37x</td></tr>
-                <tr><td>Cash flow after debt service</td><td class="n">~$0.7M/yr, growing with rents</td></tr>
-              </tbody>
+              <tbody id="mv-refi"></tbody>
             </table></div>
-            <dl class="scen">
-              <div><dt>Sell at Year 4</dt><dd>~14%<small>Levered IRR · ~1.7x</small></dd></div>
-              <div><dt>Refi &amp; hold 10 yrs</dt><dd>~12%<small>Levered IRR · ~3.0x</small></dd></div>
-              <div><dt>Downside</dt><dd>~0.9x<small>Rents $1,550, 6.25% cap</small></dd></div>
-            </dl>
-            <p>The refinance doesn't return much equity here because the bridge loan was already large, but the hold produces a growing cash yield and much more total profit. Fixed-rate debt removes the floating-rate risk that sank the previous owner.</p>
+            <dl class="scen" id="mv-scen"></dl>
+            <div id="ch-mv"></div>
+            <p id="mv-hold-p"></p>
+            <div class="tw"><table>
+              <thead><tr><th>What moves the deal</th><th class="n">NOI</th><th class="n">Sell IRR</th><th class="n">Hold IRR</th><th class="n">Hold multiple</th></tr></thead>
+              <tbody id="mv-sens"></tbody>
+            </table></div>
             <div class="callout"><b class="lab">Credit lens</b>A bridge lender will want an interest rate cap, renovation dollars held back and released as work is done, and an experienced operator. The agency lender at refinance will look at 3–12 months of stabilized collections, not the business plan.</div>
           </div>
         </div>
 
         <aside class="sheet" aria-label="Deal sheet">
           <h4>Deal sheet</h4>
-          <dl>
-            <div class="row"><dt>Units</dt><dd>240</dd></div>
-            <div class="row"><dt>In-place occ.</dt><dd>78%</dd></div>
-            <div class="row"><dt>Purchase price</dt><dd>$28.0M</dd></div>
-            <div class="row"><dt>Price / unit</dt><dd>$117k</dd></div>
-            <div class="row"><dt>All-in basis</dt><dd>$40.2M</dd></div>
-            <div class="row"><dt>Basis / unit</dt><dd>$168k</dd></div>
-          </dl>
+          <dl id="mv-sheet1"></dl>
           <h4 class="grp">Stabilized</h4>
-          <dl>
-            <div class="row"><dt>Occupancy</dt><dd>94%</dd></div>
-            <div class="row"><dt>Avg rent</dt><dd>$1,650</dd></div>
-            <div class="row"><dt>NOI</dt><dd>$2.72M</dd></div>
-            <div class="row"><dt>Yield on basis</dt><dd>6.8%</dd></div>
-            <div class="row"><dt>Agency DSCR</dt><dd>1.37x</dd></div>
-            <div class="row"><dt>Hold IRR / EM</dt><dd>~12% / ~3.0x</dd></div>
-          </dl>
-          <p class="verdict"><b>Verdict:</b> classic operational turnaround. Fix the building and management first; renovation premiums come second.</p>
+          <dl id="mv-sheet2"></dl>
+          <p class="verdict" id="mv-verdict"></p>
         </aside>
       </div>
     </div>
+
+
 
     <!-- MF CASE 4 CONVERSION -->
     <div class="panel" id="multifamily-conversion" hidden>
       <div class="memo-head">
         <div><p class="eyebrow">Case 4 · Rental-to-condo conversion</p><h2>80-unit 1960s mid-rise</h2></div>
-        <span class="tag">IC memo · illustrative</span>
+        <span class="tag">IC memo · live model</span>
       </div>
       <div class="memo">
         <div class="memo-main">
           <p class="pitch">An 80-unit, 8-story elevator building in a walkable urban neighborhood with good schools. All units are market-rate, and most leases expire within 12 months. As a rental it's worth about $345k per unit, but renovated condos nearby sell for about $750/SF, roughly $675k per unit. Plan: buy, renovate and sell the units as condos.</p>
 
+          <div class="case-model" data-ck="mc"></div>
           <div class="step">
             <h3><span class="s">Step 1</span>The arbitrage</h3>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">As a rental</th><th class="n">As condos</th></tr></thead>
-              <tbody>
-                <tr><td>How it's valued</td><td class="n">NOI ÷ cap rate</td><td class="n">Units × sale price</td></tr>
-                <tr><td>Income / revenue</td><td class="n">NOI ~$1.45M</td><td class="n">Sellout ~$54.0M</td></tr>
-                <tr><td>Value</td><td class="n">~$27.6M at 5.25% cap</td><td class="n">~$49M net of sales costs</td></tr>
-                <tr><td>Per unit</td><td class="n">~$345k</td><td class="n">~$675k gross</td></tr>
-              </tbody>
+              <tbody id="mc-arb"></tbody>
             </table></div>
             <p>Conversions work when owner-occupiers will pay much more per unit than investors will. That happens in neighborhoods where people want to buy but there's little for-sale supply.</p>
           </div>
@@ -4522,17 +4322,7 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 3</span>Budget</h3>
             <div class="tw"><table>
               <thead><tr><th>Line item</th><th class="n">$M</th><th class="n">Per unit</th></tr></thead>
-              <tbody>
-                <tr><td>Purchase price</td><td class="n">27.0</td><td class="n">$338k</td></tr>
-                <tr><td>Closing costs</td><td class="n">0.7</td><td class="n">$9k</td></tr>
-                <tr><td>Unit renovations (80 × $60k)</td><td class="n">4.8</td><td class="n">$60k</td></tr>
-                <tr><td>Common areas, roof, facade, elevators, systems</td><td class="n">3.0</td><td class="n">$38k</td></tr>
-                <tr><td>Condo legal, offering plan, engineering report</td><td class="n">0.6</td><td class="n">$8k</td></tr>
-                <tr><td>Tenant relocation assistance &amp; vacancy carry</td><td class="n">1.5</td><td class="n">$19k</td></tr>
-                <tr><td>Financing fees &amp; interest</td><td class="n">2.4</td><td class="n">$30k</td></tr>
-                <tr><td>Contingency</td><td class="n">0.8</td><td class="n">$10k</td></tr>
-                <tr class="tot"><td>Development cost</td><td class="n">40.8</td><td class="n">$510k</td></tr>
-              </tbody>
+              <tbody id="mc-budget"></tbody>
             </table></div>
           </div>
 
@@ -4540,22 +4330,15 @@ html.is-dark .pager .next{color:#111118}
             <h3><span class="s">Step 4</span>Sellout &amp; profit</h3>
             <div class="tw"><table>
               <thead><tr><th></th><th class="n">$M</th></tr></thead>
-              <tbody>
-                <tr><td>Gross sellout: 72,000 sellable SF × $750</td><td class="n">54.00</td></tr>
-                <tr><td>Insider discount (10% off for tenants buying ~15% of units)</td><td class="n">(0.81)</td></tr>
-                <tr><td>Sales commissions &amp; marketing (6%)</td><td class="n">(3.24)</td></tr>
-                <tr><td>Transfer taxes &amp; closing (1.5%)</td><td class="n">(0.81)</td></tr>
-                <tr class="tot"><td>Net sales proceeds</td><td class="n">49.14</td></tr>
-                <tr><td>Development cost</td><td class="n">(40.80)</td></tr>
-                <tr class="tot"><td>Profit</td><td class="n pos">8.34</td></tr>
-              </tbody>
+              <tbody id="mc-sell"></tbody>
             </table></div>
-            <p>Margin on total cost ≈ <b>18.6%</b>. Rent from still-occupied units during the transition helps pay interest.</p>
-            <dl class="scen">
-              <div><dt>Margin on cost</dt><dd>~18.6%<small>target 15–25%</small></dd></div>
-              <div><dt>Equity multiple</dt><dd>~1.5x<small>~3 years</small></dd></div>
-              <div><dt>Levered IRR</dt><dd>~18%<small>60% LTC loan, $16.3M equity</small></dd></div>
-            </dl>
+            <p id="mc-margin"></p>
+            <dl class="scen" id="mc-scen"></dl>
+            <div id="ch-mc"></div>
+            <div class="tw"><table>
+              <thead><tr><th>What moves the deal</th><th class="n">Profit</th><th class="n">Margin on cost</th><th class="n">Levered IRR</th><th class="n">Multiple</th></tr></thead>
+              <tbody id="mc-sens"></tbody>
+            </table></div>
           </div>
 
           <div class="step">
@@ -4572,31 +4355,24 @@ html.is-dark .pager .next{color:#111118}
               <li><b>Hidden building problems</b> found during renovation, and liability to buyers for defects afterward.</li>
               <li><b>Unsold units:</b> the sponsor keeps paying common charges and may rent them out, leaving a partly sold building.</li>
             </ul>
-            <div class="callout"><b class="lab">Credit lens</b>Lenders treat conversions like condo development: sized to net sellout, with release prices per unit and a fallback to rental value. Here the rental value ($27.6M) is close to the purchase price but well below total cost, so the lender's real protection is the condo sale price.</div>
+            
           </div>
+          <div class="callout"><b class="lab">Credit lens</b><span id="mc-credit"></span></div>
         </div>
 
         <aside class="sheet" aria-label="Deal sheet">
           <h4>Deal sheet</h4>
-          <dl>
-            <div class="row"><dt>Units</dt><dd>80</dd></div>
-            <div class="row"><dt>Purchase price</dt><dd>$27.0M</dd></div>
-            <div class="row"><dt>Rental value / unit</dt><dd>~$345k</dd></div>
-            <div class="row"><dt>Condo price / SF</dt><dd>$750</dd></div>
-            <div class="row"><dt>Development cost</dt><dd>$40.8M</dd></div>
-            <div class="row"><dt>Loan / equity</dt><dd>$24.5M / $16.3M</dd></div>
-          </dl>
+          <dl id="mc-sheet1"></dl>
           <h4 class="grp">Outcome</h4>
-          <dl>
-            <div class="row"><dt>Net sellout</dt><dd>$49.1M</dd></div>
-            <div class="row"><dt>Profit</dt><dd>$8.3M</dd></div>
-            <div class="row"><dt>Margin on cost</dt><dd>~18.6%</dd></div>
-            <div class="row"><dt>Levered IRR</dt><dd>~18%</dd></div>
-          </dl>
-          <p class="verdict"><b>Verdict:</b> works only where buyer demand is strong and local law allows conversion.</p>
+          <dl id="mc-sheet2"></dl>
+          <p class="verdict" id="mc-verdict"></p>
         </aside>
       </div>
     </div>
+
+
+
+
 
     <!-- MF DRILLS -->
     <div class="panel" id="multifamily-drills" hidden>
@@ -7464,6 +7240,7 @@ html.is-dark .pager .next{color:#111118}
           let sur=Math.max(0,n); if(sur>=interest) sur-=interest; else {const sh=interest-sur; sur=0; intRes+=sh; need+=sh;}
           let e; if(o.mode==='prorata'){const l=Math.min(need*L,Math.max(0,loanMax-loan)); e=need-l;} else e=Math.min(need,Math.max(0,eqReq-eq));
           eq+=e; loan+=need-e; cf[t]+=sur-e;
+          if(o.repay&&o.repay[t]){const a=o.repay[t], lp=Math.min(a,loan); loan-=lp; cf[t]+=a-lp;}
         }
         const Cn=o.base.reduce((a,b)=>a+b,0)+carry+intRes+fee*loanMax;
         res={loanMax,eq,loan,carry,intRes,cf};
@@ -7474,6 +7251,16 @@ html.is-dark .pager .next{color:#111118}
       const opDist=res.cf.filter(x=>x>0).reduce((a,b)=>a+b,0);
       return {total:C,loan:res.loanMax,loanBal:res.loan,equity:C-res.loanMax,carry:res.carry,fin:res.intRes+fee*res.loanMax,intRes:res.intRes,loanFee:fee*res.loanMax,
         eqCF:cf,irr:irrM(cf),mult:inn?out/inn:0,inn,out,opDist,lastDraw:cf.reduce((m,c,t)=>c<0&&t<N-1?t:m,0),saleNet:o.saleNet};
+    }
+    // Refinance at month M and hold: o {cf (monthly equity CF incl. bridge payoff at M, no sale), M, value, ltv, rate, amort, years, noi, g, cap, sc, fee}
+    function refi(o){
+      const L=o.ltv/100*o.value, i=o.rate/100/12, n=o.amort*12, pmt=i?L*i/(1-Math.pow(1+i,-n)):L/n, ds=pmt*12;
+      const cf=o.cf.slice(0,o.M+1); cf[o.M]+=L*(1-(o.fee==null?0.01:o.fee));
+      let bal=L; const Y=Math.round(o.years*12)-o.M; let y1=null;
+      for(let k=1;k<=Y;k++){const yr=Math.floor((k-1)/12), noi=o.noi*Math.pow(1+o.g/100,yr+1); const intr=bal*i; bal-=pmt-intr; const c=noi/12-pmt; cf.push(c); if(k===12) y1=noi-ds;}
+      const exitNOI=o.noi*Math.pow(1+o.g/100,Math.ceil(Y/12)+1), sale=exitNOI/(o.cap/100)*(1-o.sc/100); cf[cf.length-1]+=sale-bal;
+      const inn=-cf.filter(x=>x<0).reduce((a,b)=>a+b,0), out=cf.filter(x=>x>0).reduce((a,b)=>a+b,0);
+      return {loan:L,ds,dscr:o.noi/ds,dy:o.noi/L,cfY1:y1==null?o.noi-ds:y1,irr:irrM(cf),mult:inn?out/inn:0,inn,out,exitNOI,sale,bal,cf};
     }
     const row=(l,v,t)=>'<div class="tt-r'+(t?' tot':'')+'"><span>'+l+'</span><span>'+v+'</span></div>';
     const fx=(h,f,rows,n)=>'<div class="tt-h">'+h+'</div>'+(f?'<div class="tt-f">'+f+'</div>':'')+(rows||'')+(n?'<div class="tt-n">'+n+'</div>':'');
@@ -7528,7 +7315,7 @@ html.is-dark .pager .next{color:#111118}
     document.addEventListener('focusout',e=>{if(isT(e)) hide();});
     document.addEventListener('click',e=>{const n=isT(e); if(n){ if(cur===n) hide(); else show(n);} });
     addEventListener('scroll',()=>{if(cur) hide();},{passive:true}); addEventListener('keydown',e=>{if(e.key==='Escape') hide();});
-    return {F,finance,irrM,mount,last};
+    return {F,finance,irrM,mount,last,refi};
   })();
   // ---------- @hg ----------
   // ---------- Hotel Case 1: live ground-up model ----------
@@ -7825,6 +7612,347 @@ html.is-dark .pager .next{color:#111118}
       K.sheet('sheet1',[['Units',F.N(U)],['Total cost',F.$M1(r.total),'cost'],['Cost / unit',pu(r.total)],['Loan ('+p.ltc+'% LTC)',F.$M1(r.loan),'loan'],['Equity',F.$M1(r.equity),'eq']]);
       K.sheet('sheet2',[['Avg rent',F.D(p.rent)],['NOI',F.$M2(r.noiS),'noi'],['Yield on cost',F.P1(r.yoc),'yoc'],['Exit cap',p.cap.toFixed(2)+'%','cap'],['Spread',F.bps(spread),'spread'],['Value','~'+F.$M1(r.value),'value'],['Levered IRR',F.P1(r.irr),'irr'],['Equity multiple',r.mult.toFixed(2)+'x','mult'],['Debt yield',F.P1(dy),'dy']]);
       K.set('verdict','<b>Verdict:</b> '+(spread<0.01?'good location, thin spread. Needs a tax abatement or cheaper land to clear the hurdle.':spread<0.015?'clears the minimum spread; a '+F.P1(r.irr)+' IRR is '+(r.irr<0.15?'still light for development risk.':'workable.'):'pencils: '+F.bps(spread)+' of spread and a '+F.P1(r.irr)+' IRR.'));
+    }});
+  // ---------- @end ----------
+  // ---------- @hv ----------
+  // ---------- Hotel Case 2: live REO value-add model ----------
+  CK.mount({key:'hv',
+    inputs:[['price','Purchase price $M',11,0.5,0],['pip','PIP / renovation $k/key',60,5,0],['occ','Stabilized occ. %',74,1,1,100],['adr','Stabilized ADR $',175,5,1],['ltc','Loan-to-cost %',65,1,0,90],['rate','Loan rate %',9,0.25,0],['cap','Exit cap %',7.75,0.25,1],['hold','Sale year',3,1,2,10],
+      ['keys','Keys',220,5,10,null,1],['comp','T-12 comp-set RevPAR $',112,1,1,null,1],['comp1','Yr 3 comp-set RevPAR $',122,1,1,null,1],['repl','Replacement cost $k/key',350,10,0,null,1],['close','Closing costs $M',0.4,0.05,0,null,1],['dm','Deferred maintenance $M',2,0.1,0,null,1],['reno','Renovation (mo)',12,1,1,36,1],['ooo','Rooms out of order in reno %',15,1,0,100,1],
+      ['o0','T-12 occupancy %',52,1,0,100,1],['a0','T-12 ADR $',128,1,0,null,1],['n0','T-12 non-rooms rev. % of rooms',41.2,0.5,0,null,1],['m0','T-12 GOP margin %',18,0.5,0,null,1],['f0','T-12 mgmt &amp; fixed $M',1.18,0.01,0,null,1],
+      ['n1','Stab. non-rooms rev. % of rooms',30.9,0.5,0,null,1],['m1','Stab. GOP margin %',37,0.5,0,null,1],['mgmt','Mgmt fee %',3,0.25,0,null,1],['tax','Stab. tax &amp; insurance $M',1.15,0.05,0,null,1],['ffe','FF&amp;E reserve %',4,0.5,0,null,1],['sc','Sale costs %',1.5,0.25,0,null,1]],
+    note:'Fixed in the model: contingency at 10% of the renovation, 1% loan fee, interest-only bridge loan. Year 1 runs at T-12 occupancy, ADR and margin with the out-of-order rooms removed; Year 2 is halfway between T-12 and stabilized; Year 3 on is stabilized. Loan and equity fund every dollar pro rata. Value = stabilized NOI ÷ exit cap. RGI = RevPAR ÷ comp-set RevPAR × 100; the comp set grows between T-12 and Year 3.',
+    run(p){
+      const k=p.keys, R=Math.round(p.reno), sale=Math.round(p.hold)*12, N=sale+1;
+      const yr=(occ,adr,n,m,fixed,avail,cp)=>{const rooms=k*365*avail*occ/100*adr/1e6, tot=rooms*(1+n/100), gop=tot*m/100, mg=tot*p.mgmt/100, ffe=tot*p.ffe/100, fx=fixed; return {occ,adr,revpar:occ/100*adr,rgi:occ/100*adr/(cp||p.comp1)*100,rooms,tot,gop,m,mg,fx,ffe,noi:gop-mg-fx-ffe};};
+      const tax0=p.f0-p.mgmt/100*(k*365*p.o0/100*p.a0/1e6*(1+p.n0/100));
+      const t12=yr(p.o0,p.a0,p.n0,p.m0,tax0,1,p.comp); t12.noi=t12.gop-p.f0-t12.ffe; t12.mg=p.mgmt/100*t12.tot; t12.fx=tax0;
+      const y1=yr(p.o0,p.a0,p.n0,p.m0,tax0,1-p.ooo/100*Math.min(R,12)/12,p.comp), y2=yr((p.o0+p.occ)/2,(p.a0+p.adr)/2,(p.n0+p.n1)/2,(p.m0+p.m1)/2,(tax0+p.tax)/2,1,(p.comp+p.comp1)/2), st=yr(p.occ,p.adr,p.n1,p.m1,p.tax,1);
+      const ys=[y1,y2,st];
+      const pip=p.pip*k/1e3, cont=0.1*pip, base=new Array(N).fill(0), noi=new Array(N).fill(0);
+      base[0]+=p.price+p.close; for(let t=1;t<=R&&t<N;t++) base[t]+=(pip+p.dm+cont)/R;
+      for(let t=1;t<N;t++) noi[t]=ys[Math.min(2,Math.floor((t-1)/12))].noi/12;
+      const value=st.noi/(p.cap/100), saleNet=value*(1-p.sc/100);
+      const f=CK.finance({base,noi,ltc:p.ltc,rate:p.rate,mode:'prorata',saleNet});
+      return Object.assign(f,{k,R,saleM:sale,t12,ys,st,pip,cont,value,yob:st.noi/f.total});
+    },
+    render(r,p,K){
+      const {F,fx,row,T}=K, k=r.k, pk=x=>F.K(x*1e3/k), t=r.t12, st=r.st;
+      K.rows('t12',[{c:['Occupancy / ADR / RevPAR',p.o0+'% / $'+p.a0+' / $'+t.revpar.toFixed(2)]},{c:['RGI vs. comp set','~'+Math.round(t.rgi)]},{c:['Rooms / other revenue ($M)',F.M2(t.rooms)+' / '+F.M2(t.tot-t.rooms)]},{c:['Total revenue ($M)',F.M2(t.tot)]},{c:['GOP ($M, '+p.m0+'% margin)',F.M2(t.gop)]},{c:['Management fee &amp; fixed charges ($M)','('+F.M2(p.f0)+')']},{c:['FF&amp;E reserve ($M)','('+F.M2(t.ffe)+')']},{tot:1,c:['NOI ($M)',K.t('t12',F.M2(t.noi))]}]);
+      T.t12=fx('T-12 NOI','GOP − management &amp; fixed charges − FF&amp;E reserve',row('GOP ('+p.m0+'% of '+F.M2(t.tot)+')',F.M2(t.gop))+row('Mgmt &amp; fixed','('+F.M2(p.f0)+')')+row('FF&amp;E reserve','('+F.M2(t.ffe)+')')+row('NOI',F.$M2(t.noi),1),'With NOI near zero or negative, a cap rate gives a meaningless value.');
+      const b=[['Purchase price',p.price],['Closing costs',p.close],['PIP / renovation',r.pip],['Deferred maintenance',p.dm],['Contingency (10% of renovation)',r.cont],['Operating shortfall (modeled)',r.carry],['Financing fees &amp; interest reserve',r.fin]];
+      K.rows('basis',b.map(([n,v])=>({c:[n,F.M2(v),pk(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M2(r.total)),pk(r.total)]}]));
+      T.basis=fx('All-in basis','Sum of the basis lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M2(v))).join('')+row('All-in basis',F.$M2(r.total),1));
+      const disc=1-r.total*1e3/k/p.repl;
+      K.set('basis-p','At '+pk(r.total)+'/key you own a renovated, branded, full-service hotel for '+F.P0(disc)+' below the ~$'+p.repl+'k/key replacement cost. That discount is the margin of safety.');
+      const cols=[t].concat(r.ys), pf=(l,f,tk)=>({c:[l].concat(cols.map((y,i)=>tk&&i===3?K.t(tk,f(y)):f(y)))});
+      K.rows('pf',[pf('Occupancy',y=>Math.round(y.occ)+'%'),pf('ADR',y=>'$'+Math.round(y.adr)),pf('RevPAR',y=>'$'+y.revpar.toFixed(2)),pf('RGI',y=>'~'+Math.round(y.rgi),'rgi'),pf('Total revenue ($M)',y=>F.M2(y.tot)),pf('GOP margin',y=>Math.round(y.m)+'%'),pf('Mgmt, tax &amp; insurance ($M)',y=>'('+F.M2(y.mg+y.fx)+')'),pf('FF&amp;E reserve ($M)',y=>'('+F.M2(y.ffe)+')'),pf('NOI ($M)',y=>F.M2(y.noi),'noi')]);
+      T.rgi=fx('RGI (revenue generation index)','Hotel RevPAR ÷ comp-set RevPAR × 100','$'+st.revpar.toFixed(2)+' ÷ $'+p.comp1+' × 100 = <b>'+Math.round(st.rgi)+'</b>','100 = fair share. The thesis is moving from ~'+Math.round(t.rgi)+' to ~'+Math.round(st.rgi)+'.');
+      T.noi=fx('Stabilized NOI','GOP − management − tax &amp; insurance − FF&amp;E reserve',row('Revenue',F.M2(st.tot))+row('GOP ('+p.m1+'%)',F.M2(st.gop))+row('Management','('+F.M2(st.mg)+')')+row('Tax &amp; insurance','('+F.M2(st.fx)+')')+row('FF&amp;E reserve','('+F.M2(st.ffe)+')')+row('NOI',F.$M2(st.noi),1));
+      T.yob=fx('Yield on basis','Stabilized NOI ÷ all-in basis',F.$M2(st.noi)+' ÷ '+F.$M2(r.total)+' = <b>'+F.P1(r.yob)+'</b>');
+      T.value=fx('Stabilized value','NOI ÷ exit cap',F.$M2(st.noi)+' ÷ '+p.cap.toFixed(2)+'% = <b>'+F.$M1(r.value)+'</b> ('+F.K(r.value*1e3/k)+'/key)');
+      K.finTips(T,r,p,{noi:st.noi,value:r.value,saleM:r.saleM,mode:'prorata'}); T.loan=T.loan.replace('Construction loan','Bridge loan');
+      K.set('ret1','Value-add bridge loan at '+p.ltc+'% LTC ('+K.t('loan',F.$M1(r.loan))+', ~'+p.rate+'% interest-only) with renovation dollars as future funding; '+K.t('eq',F.$M1(r.equity))+' of equity. Year 1 runs through the renovation; Year 2 ramps under the new flag; Year 3 stabilizes'+(r.saleM===36?' and sells.':'; the hotel sells in Year '+(r.saleM/12)+'.'));
+      K.set('ret2','Stabilized yield on all-in basis = '+F.M2(st.noi)+' ÷ '+F.M1(r.total)+' = <b>'+K.t('yob',F.P1(r.yob))+'</b>. At a '+p.cap.toFixed(2)+'% exit cap, value is ~'+K.t('value',F.$M1(r.value))+' ('+F.K(r.value*1e3/k)+'/key), about '+F.$M1(Math.abs(r.value-r.total))+' '+(r.value>=r.total?'above':'below')+' basis. A refinance is an alternative: a '+F.P1(st.noi/r.loan)+' debt yield on the existing loan supports a new loan that returns '+(st.noi/r.loan>0.12?'most of':'some of')+' the equity.');
+      const rg=(target,dOcc)=>{const o=p.occ+dOcc; return this.run(Object.assign({},p,{occ:o,adr:target/100*p.comp1/(o/100)}));};
+      const dn=rg(95,-6), up=rg(113,2);
+      K.set('scen','<div><dt>Downside · RGI ~95</dt><dd>'+F.P1(dn.irr)+'<small>Levered IRR · '+dn.mult.toFixed(2)+'x</small></dd></div><div><dt>Base · RGI ~'+Math.round(st.rgi)+'</dt><dd>'+K.t('irr',F.P1(r.irr))+'<small>Levered IRR · '+K.t('mult',r.mult.toFixed(2)+'x')+'</small></dd></div><div><dt>Upside · RGI ~113</dt><dd>'+F.P1(up.irr)+'<small>Levered IRR · '+up.mult.toFixed(2)+'x</small></dd></div>');
+      K.set('down','Going from RGI '+Math.round(t.rgi)+' to '+Math.round(st.rgi)+' is the whole thesis'+(st.rgi>100?', and it\'s aggressive for a 1989 building':'')+'. If we only reach RGI ~95, value is '+F.$M1(dn.value)+' against a '+F.$M1(dn.total)+' basis and equity '+(dn.mult<1?'loses money':'returns only '+dn.mult.toFixed(2)+'x')+'. The deal depends on execution: diligence must prove the brand, the operator and the renovation scope can reach fair share or better.');
+      K.sens('sens',[['ADR +$10',{adr:p.adr+10}],['Occupancy –4 pts',{occ:p.occ-4}],['Renovation +20%',{pip:p.pip*1.2}],['Exit cap +50 bps',{cap:p.cap+0.5}],['Sell a year later',{hold:p.hold+1}]],
+        [(s,b)=>K.d(s.st.noi-b.st.noi,x=>'$'+Math.round(x*1e3)+'k'),s=>F.P1(s.yob),s=>F.P1(s.irr),s=>s.mult.toFixed(2)+'x']);
+      K.sheet('sheet1',[['Keys',F.N(k)],['Purchase price',F.$M1(p.price)],['Price / key',F.K(p.price*1e3/k)],['All-in basis',F.$M1(r.total),'basis'],['Basis / key',pk(r.total)],['vs. replacement','~'+F.P0(disc)+' below']]);
+      K.sheet('sheet2',[['RevPAR / RGI','$'+st.revpar.toFixed(2)+' / '+Math.round(st.rgi),'rgi'],['NOI',F.$M2(st.noi),'noi'],['Yield on basis',F.P1(r.yob),'yob'],['Exit cap',p.cap.toFixed(2)+'%','cap'],['Levered IRR',F.P1(r.irr),'irr'],['Equity multiple',r.mult.toFixed(2)+'x','mult']]);
+      K.set('verdict','<b>Verdict:</b> '+(r.irr<0.12?'doesn\'t pay for the execution risk at '+F.P1(r.irr)+'. Lower the price or the renovation scope.':'strong basis, but it only works if the rebrand reaches fair share (RGI ≥ ~100). At RGI 95 the IRR is '+F.P1(dn.irr)+'.'));
+    }});
+  // ---------- @end ----------
+  // ---------- @iv ----------
+  // ---------- Industrial Case 2: live infill value-add model ----------
+  CK.mount({key:'iv',
+    inputs:[['price','Purchase price $M',32,0.5,0],['mkt','Market rent $/SF NNN',14.5,0.25,0],['occ','Stabilized leased %',95,1,0,100],['capex','Base-building capex $M',6.8,0.1,0],['ren','Renewal probability %',60,5,0,100],['ltc','Loan-to-cost %',60,1,0,90],['rate','Loan rate %',7,0.25,0],['cap','Exit cap %',5,0.25,1],
+      ['sf','Building SF',220000,5000,10000,null,1],['ip','In-place leased %',85,1,0,100,1],['ipr','In-place rent $/SF NNN',8.5,0.25,0,null,1],['roll','In-place leases roll over (mo)',48,1,1,120,1],['down','Downtime on move-outs (mo)',6,1,0,24,1],['free','Free rent on new leases (mo)',2,1,0,12,1],
+      ['ti','New-lease TI $/SF',6,0.5,0,null,1],['rti','Renewal TI $/SF',2,0.5,0,null,1],['lc','LC % of 5-yr rent',6,0.25,0,null,1],['rec','Recoveries lost on vacant $/SF',3,0.25,0,null,1],['nr','Non-recoverable $M/yr',0.05,0.01,0,null,1],['close','Closing costs $M',0.9,0.05,0,null,1],['cx','Capex period (mo)',6,1,1,24,1],['sale','Sale month',48,1,12,120,1],['sc','Sale costs %',1.5,0.25,0,null,1]],
+    note:'Fixed in the model: contingency at 10% of capex, 1% loan fee, 5-year new leases at flat rents (no bumps in the model). In-place leases roll evenly over the rollover period. Renewing tenants re-sign at market with renewal TI and half the commission; the rest leave, the suite sits empty for the downtime, then re-leases at market with free rent. Vacant space above the stabilized target leases after the capex period. Loan and equity fund every dollar pro rata. Value = stabilized NOI ÷ exit cap, less a credit for rent not yet paying at sale.',
+    run(p){
+      const S=p.sf, sale=Math.round(p.sale), N=sale+1, RO=Math.max(1,Math.round(p.roll)), D=Math.round(p.down), Fr=Math.round(p.free), CX=Math.round(p.cx);
+      const ipSF=S*p.ip/100, tgt=S*p.occ/100, vacL=Math.max(0,tgt-ipSF), cont=0.1*p.capex, lcNew=p.lc/100*p.mkt*5, flags=[];
+      const base=new Array(N).fill(0), noi=new Array(N).fill(0), suites=[]; let tiS=0, lcS=0;
+      base[0]+=p.price+p.close; for(let t=1;t<=CX&&t<N;t++) base[t]+=(p.capex+cont)/CX;
+      const sl=Math.min(ipSF,tgt)/RO;
+      for(let k=1;k<=RO;k++){ // each slice rolls at month k
+        const rn=sl*p.ren/100, mv=sl-rn;
+        if(k<N){base[k]+=rn*(p.rti+lcNew/2)/1e6; tiS+=rn*p.rti/1e6; lcS+=rn*lcNew/2/1e6;}
+        const re=k+D; if(re<N){base[re]+=mv*(p.ti+lcNew)/1e6; tiS+=mv*p.ti/1e6; lcS+=mv*lcNew/1e6;}
+        suites.push({sf:rn,start:0,end:k,r0:p.ipr,from:k,rent:p.mkt,pay:k});
+        suites.push({sf:mv,start:0,end:k,r0:p.ipr,from:re,rent:p.mkt,pay:re+Fr});
+      }
+      // vacant lease-up after capex, evenly over 12 months
+      const vs=vacL/12; for(let k=1;k<=12;k++){const m=CX+k; if(m<N){base[m]+=vs*(p.ti+lcNew)/1e6; tiS+=vs*p.ti/1e6; lcS+=vs*lcNew/1e6;} suites.push({sf:vs,start:-1,end:0,r0:0,from:m,rent:p.mkt,pay:m+Fr});}
+      for(let t=1;t<N;t++){ let rent=0, occ=0;
+        for(const s of suites){ if(s.start===0&&t<=s.end){rent+=s.sf*s.r0;occ+=s.sf;} else if(t>s.from){occ+=s.sf; if(t>s.pay) rent+=s.sf*s.rent;} }
+        noi[t]=(rent-(S-occ)*p.rec)/12/1e6-p.nr/12; }
+      const noiS=(tgt*p.mkt-(S-tgt)*p.rec)/1e6-p.nr;
+      let credit=0; for(const s of suites){ if(s.start===0&&sale<=s.end) continue; if(sale<s.pay) credit+=(s.pay-sale)*s.sf*s.rent/12/1e6; }
+      if(RO>=sale) flags.push('Some in-place leases still roll after the sale; the buyer is credited for rent not yet at market.');
+      const value=noiS/(p.cap/100), saleNet=value*(1-p.sc/100)-credit;
+      const f=CK.finance({base,noi,ltc:p.ltc,rate:p.rate,mode:'prorata',saleNet});
+      const inNOI=(ipSF*p.ipr-(S-ipSF)*p.rec)/1e6-p.nr;
+      const ti=tiS, lc=lcS;
+      return Object.assign(f,{flags,saleM:sale,ipSF,tgt,cont,noiS,inNOI,value,credit,ti,lc,yob:noiS/f.total,gic:inNOI/p.price,mtm:p.mkt/p.ipr-1});
+    },
+    render(r,p,K){
+      const {F,fx,row,T}=K, S=p.sf, ps=x=>'$'+Math.round(x*1e6/S);
+      K.rows('inplace',[{c:['Leased: '+F.N(r.ipSF)+' SF × $'+p.ipr.toFixed(2)+' NNN',F.M2(r.ipSF*p.ipr/1e6)]},{c:['Lost recoveries on '+F.N(S-r.ipSF)+' SF vacant (~$'+p.rec.toFixed(2)+'/SF)','('+F.M2((S-r.ipSF)*p.rec/1e6)+')']},{c:['Non-recoverable expenses','('+F.M2(p.nr)+')']},{tot:1,c:['In-place NOI',K.t('innoi',F.M2(r.inNOI))]}]);
+      T.innoi=fx('In-place NOI','Rent − lost recoveries on vacant − non-recoverables',row('Rent',F.M2(r.ipSF*p.ipr/1e6))+row('Lost recoveries','('+F.M2((S-r.ipSF)*p.rec/1e6)+')')+row('Non-recoverable','('+F.M2(p.nr)+')')+row('NOI',F.$M2(r.inNOI),1));
+      T.gic=fx('Going-in cap rate','In-place NOI ÷ purchase price',F.$M2(r.inNOI)+' ÷ '+F.$M1(p.price)+' = <b>'+F.P1(r.gic)+'</b>','Below the '+p.rate+'% debt cost: negative leverage on day one.');
+      T.mtm=fx('Mark-to-market','Market rent ÷ in-place rent − 1','$'+p.mkt.toFixed(2)+' ÷ $'+p.ipr.toFixed(2)+' − 1 = <b>'+F.P0(r.mtm)+'</b>');
+      K.set('price','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/S)+'/SF), a '+K.t('gic',F.P1(r.gic))+' going-in cap. '+(r.gic<p.rate/100?'That\'s below the debt cost, so the deal has negative leverage on day one. Buyers accept it because they\'re paying for rent growth: in-place leases roll within ~'+Math.round(p.roll/12)+' years.':'That\'s above the debt cost, so leverage is positive from day one.'));
+      const b=[['Purchase price',p.price],['Closing costs',p.close],['Base building capex (roof, sprinklers, docks, paving, LED, cosmetics)',p.capex],['Contingency (10% of capex)',r.cont],['TI on rollover and lease-up',r.ti],['Leasing commissions',r.lc],['Downtime &amp; free rent carry',r.carry],['Financing fees &amp; interest reserve',r.fin]];
+      K.rows('basis',b.map(([n,v])=>({c:[n,F.M1(v),ps(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M1(r.total)),'~'+ps(r.total)]}]));
+      T.basis=fx('All-in basis','Sum of the basis lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M1(v))).join('')+row('All-in basis',F.$M1(r.total),1),'Carry is any month when NOI goes negative during rollover downtime.');
+      K.rows('noi',[{c:['Leased',p.ip+'%',p.occ+'%']},{c:['Average rent (NNN)','$'+p.ipr.toFixed(2),'$'+p.mkt.toFixed(2)]},{c:['Base rent ($M)',F.M2(r.ipSF*p.ipr/1e6),F.M2(r.tgt*p.mkt/1e6)]},{c:['Lost recoveries &amp; non-recoverable ($M)','('+F.M2((S-r.ipSF)*p.rec/1e6+p.nr)+')','('+F.M2((S-r.tgt)*p.rec/1e6+p.nr)+')']},{tot:1,c:['NOI ($M)',F.M2(r.inNOI),K.t('noi',F.M2(r.noiS))]}]);
+      T.noi=fx('Stabilized NOI','Leased SF × market rent − lost recoveries − non-recoverables',F.N(r.tgt)+' × $'+p.mkt.toFixed(2)+' = '+F.M2(r.tgt*p.mkt/1e6)+row('Lost recoveries','('+F.M2((S-r.tgt)*p.rec/1e6)+')')+row('Non-recoverable','('+F.M2(p.nr)+')')+row('NOI',F.$M2(r.noiS),1));
+      K.set('noi-p','NOI goes from '+F.$M2(r.inNOI)+' to '+F.$M2(r.noiS)+' ('+(r.noiS/r.inNOI).toFixed(1)+'x), almost entirely from rent. Capex is a fraction of what the same uplift would cost in office.');
+      T.yob=fx('Yield on basis','Stabilized NOI ÷ all-in basis',F.$M2(r.noiS)+' ÷ '+F.$M1(r.total)+' = <b>'+F.P1(r.yob)+'</b>');
+      T.value=fx('Stabilized value','NOI ÷ exit cap',F.$M2(r.noiS)+' ÷ '+p.cap.toFixed(2)+'% = <b>'+F.$M1(r.value)+'</b> ($'+Math.round(r.value*1e6/S)+'/SF)');
+      const be=r.total*p.cap/100;
+      T.be=fx('Break-even NOI','Basis × exit cap: the NOI at which value equals basis',F.$M1(r.total)+' × '+p.cap.toFixed(2)+'% = <b>'+F.$M2(be)+'</b>');
+      K.finTips(T,r,p,{noi:r.noiS,value:r.value,saleM:r.saleM,mode:'prorata',credit:r.credit}); T.loan=T.loan.replace('Construction loan','Bridge loan');
+      K.set('ret1','Stabilized yield on basis = '+F.M2(r.noiS)+' ÷ '+F.M1(r.total)+' = <b>'+K.t('yob',F.P1(r.yob))+'</b>. At a '+p.cap.toFixed(2)+'% exit cap, value is ~'+K.t('value',F.$M1(r.value))+' ($'+Math.round(r.value*1e6/S)+'/SF), about '+F.$M1(Math.abs(r.value-r.total))+' ('+F.P0(Math.abs(r.value/r.total-1))+') '+(r.value>=r.total?'above':'below')+' basis.');
+      K.set('ret2','Financing: a bridge loan at '+p.ltc+'% LTC ('+K.t('loan',F.$M1(r.loan))+', ~'+p.rate+'%) with capex and leasing costs as future funding. Equity '+K.t('eq',F.$M1(r.equity))+'. Early years run near break-even after interest; most of the return comes at sale in month '+r.saleM+'.');
+      const dn=this.run(Object.assign({},p,{mkt:p.mkt-1.5,cap:p.cap+0.5}));
+      K.set('scen','<div><dt>Downside</dt><dd>'+dn.mult.toFixed(2)+'x<small>$'+(p.mkt-1.5).toFixed(2)+' rents, '+(p.cap+0.5).toFixed(2)+'% exit</small></dd></div><div><dt>Base</dt><dd>'+K.t('irr',F.P1(r.irr))+'<small>Levered IRR · '+K.t('mult',r.mult.toFixed(2)+'x')+' · '+F.yrs(r.saleM)+' years</small></dd></div><div><dt>Break-even NOI</dt><dd>'+K.t('be',F.$M2(be))+'<small>Value = basis at '+p.cap.toFixed(2)+'%</small></dd></div>');
+      K.set('down','If market rents soften to $'+(p.mkt-1.5).toFixed(2)+' and buyers demand a '+(p.cap+0.5).toFixed(2)+'% cap, value is ~'+F.$M1(dn.value)+', '+(dn.value<dn.total?'below':'roughly')+' the basis, and equity returns '+dn.mult.toFixed(2)+'x. The thesis depends on market rent holding, so diligence focuses on what tenants will really pay for a 24\' building.');
+      K.sens('sens',[['Market rent –$1/SF',{mkt:p.mkt-1}],['Exit cap +50 bps',{cap:p.cap+0.5}],['Renewals 40% (more move-outs)',{ren:40}],['Downtime 12 months',{down:12}],['Capex +25%',{capex:p.capex*1.25}]],
+        [(s,b)=>K.d(s.noiS-b.noiS,x=>'$'+x.toFixed(2)+'M'),(s,b)=>K.d(s.value-b.value,x=>'$'+x.toFixed(1)+'M'),s=>F.P1(s.irr),s=>s.mult.toFixed(2)+'x']);
+      const dyIn=r.inNOI/r.loan, dyS=r.noiS/r.loan;
+      K.set('credit','On in-place NOI, the loan\'s debt yield is only ~'+F.P1(dyIn)+', so a bank won\'t lend on today\'s income. That\'s why this is a bridge loan sized to the business plan, with future funding and leasing tests. At stabilization the debt yield is ~'+K.t('dy',F.P1(dyS))+', which '+(dyS>=0.09?'supports':'is tight for')+' a permanent refinance.');
+      K.sheet('sheet1',[['Size',F.N(S)+' SF'],['Clear height',"24'"],['Purchase price',F.$M1(p.price)],['Price / SF','$'+Math.round(p.price*1e6/S)],['Going-in cap',F.P1(r.gic),'gic'],['All-in basis',F.$M1(r.total),'basis'],['Mark-to-market','~'+F.P0(r.mtm),'mtm']]);
+      K.sheet('sheet2',[['Leased / rent',p.occ+'% / $'+p.mkt.toFixed(2)],['NOI',F.$M2(r.noiS),'noi'],['Yield on basis',F.P1(r.yob),'yob'],['Exit cap',p.cap.toFixed(2)+'%','cap'],['Value','~'+F.$M1(r.value),'value'],['Levered IRR',F.P1(r.irr),'irr'],['Equity multiple',r.mult.toFixed(2)+'x','mult']]);
+      K.set('verdict','<b>Verdict:</b> '+(r.irr<0.1?'returns of '+F.P1(r.irr)+' don\'t pay for the rollover risk.':'a location and mark-to-market bet. Works if market rents hold for older product: at $'+(p.mkt-1.5).toFixed(2)+' and a '+(p.cap+0.5).toFixed(2)+'% cap, equity gets '+dn.mult.toFixed(2)+'x.'));
+    }});
+  // ---------- @end ----------
+  // ---------- @rv ----------
+  // ---------- Retail Case 2: live re-anchor, refinance & hold model ----------
+  CK.mount({key:'rv',
+    inputs:[['price','Purchase price $M',21,0.5,0],['gr','Grocer rent $/SF',14,0.5,0],['shr','New shop rent $/SF',24,1,0],['capex','Site &amp; building capex $M',6.9,0.1,0],['ltc','Bridge loan-to-cost %',60,1,0,90],['rate','Bridge rate %',8,0.25,0],['cap','Exit / value cap %',7,0.25,1],['prate','Permanent loan rate %',6.25,0.25,0],
+      ['gla','GLA SF',280000,5000,10000,null,1],['ex','Existing leased SF',154000,1000,0,null,1],['exr','Existing rent $/SF now',12,0.25,0,null,1],['cur','Existing rent once cured $/SF',13,0.25,0,null,1],['cot','Co-tenancy reductions $M/yr',0.15,0.01,0,null,1],
+      ['gsf','Grocer SF',45000,1000,0,null,1],['msf','Medical SF',15000,1000,0,null,1],['mr','Medical rent $/SF',26,1,0,null,1],['fsf','Fitness SF',30000,1000,0,null,1],['fr','Fitness rent $/SF',13,0.5,0,null,1],['osf','Off-price SF',15000,1000,0,null,1],['or','Off-price rent $/SF',15,0.5,0,null,1],['ssf','New shop SF',12000,1000,0,null,1],['np','Pad sites',3,1,0,10,1],['pad','Pad rent $k/yr each',120,5,0,null,1],
+      ['tig','Grocer TI $/SF',70,5,0,null,1],['tim','Medical TI $/SF',90,5,0,null,1],['tif','Fitness TI $/SF',40,5,0,null,1],['tio','Off-price TI $/SF',30,5,0,null,1],['tis','Shop TI $/SF',40,5,0,null,1],['lc','LC % of 10-yr rent',4.5,0.25,0,null,1],['close','Closing costs $M',0.8,0.05,0,null,1],
+      ['vx','Lost recoveries on vacant $/SF',5.5,0.25,0,null,1],['nr','Non-recoverable $M/yr',0.15,0.01,0,null,1],['caps','CAM caps &amp; reserves $M/yr',0.07,0.01,0,null,1],['cl','Credit loss %',3,0.5,0,null,1],['go','Grocer opens (mo)',18,1,1,48,1],['refm','Refinance / sale month',48,1,12,120,1],
+      ['ltv','Permanent LTV %',60,1,0,80,1],['am','Amortization (yrs)',30,1,10,40,1],['g','NOI growth in hold %/yr',2,0.25,0,null,1],['hy','Hold horizon (yrs)',10,1,5,30,1],['sc','Sale costs %',1.5,0.25,0,null,1]],
+    note:'Fixed in the model: contingency at 10% of capex (spent over the first 12 months), 1% loan fees. Medical and pads open at month 12, fitness and off-price at 15, the grocer when you set; new shops sign evenly from month 12 to 30 and pay after 4 months free. Co-tenancy reductions end and existing tenants go to the cured rent when the grocer opens. Loan and equity fund every dollar pro rata. "Sell" sells at the refinance month at the value cap; "hold" refinances there, grows NOI each year and sells at the end of the horizon at the same cap.',
+    run(p){
+      const R=p.gla, M=Math.round(p.refm), N=M+1, G=Math.round(p.go), flags=[];
+      const tenants=[[p.gsf,p.gr,p.tig,G],[p.msf,p.mr,p.tim,12],[p.fsf,p.fr,p.tif,15],[p.osf,p.or,p.tio,15]];
+      const cont=0.1*p.capex, base=new Array(N).fill(0), noi=new Array(N).fill(0);
+      base[0]+=p.price+p.close; for(let t=1;t<=12&&t<N;t++) base[t]+=(p.capex+cont)/12;
+      let ti=0, lc=0;
+      tenants.forEach(([sf,rt,tsf,op])=>{const m=Math.max(1,op-3); if(m<N){base[m]+=sf*(tsf+p.lc/100*10*rt)/1e6; ti+=sf*tsf/1e6; lc+=sf*p.lc/100*10*rt/1e6;}});
+      const padLC=p.np*p.pad*1e3*10*p.lc/100/1e6; if(12<N){base[12]+=padLC; lc+=padLC;}
+      const shops=[]; for(let k=0;k<18;k++){const m=12+k, sz=p.ssf/18; if(m<N){base[m]+=sz*(p.tis+p.lc/100*10*p.shr)/1e6; ti+=sz*p.tis/1e6; lc+=sz*p.lc/100*10*p.shr/1e6;} shops.push({sz,op:m+3,pay:m+3+4});}
+      for(let t=1;t<N;t++){
+        let rent=0, occ=p.ex; rent+=p.ex*(t>G?p.cur:p.exr);
+        tenants.forEach(([sf,rt,,op])=>{if(t>op){rent+=sf*rt; occ+=sf;}});
+        if(t>12) rent+=p.np*p.pad*1e3;
+        for(const s of shops){ if(t>s.op) occ+=s.sz; if(t>s.pay) rent+=s.sz*p.shr; }
+        noi[t]=(rent*(1-p.cl/100)-(R-occ)*p.vx)/12/1e6-(t>G?0:p.cot/12)-(p.nr+p.caps)/12;
+      }
+      const leased=p.ex+tenants.reduce((a,x)=>a+x[0],0)+p.ssf, padR=p.np*p.pad/1e3;
+      const baseRent=(p.ex*p.cur+tenants.reduce((a,x)=>a+x[0]*x[1],0)+p.ssf*p.shr)/1e6+padR;
+      const leak=(R-leased)*p.vx/1e6+p.nr+p.caps, noiS=baseRent*(1-p.cl/100)-leak;
+      if(G>=M) flags.push('The grocer opens after the refinance/sale month, so the stabilized value isn\'t earned yet.');
+      const value=noiS/(p.cap/100);
+      const f=CK.finance({base,noi,ltc:p.ltc,rate:p.rate,mode:'prorata',saleNet:value*(1-p.sc/100)});
+      const g0=CK.finance({base,noi,ltc:p.ltc,rate:p.rate,mode:'prorata',saleNet:0});
+      const h=CK.refi({cf:g0.eqCF,M,value,ltv:p.ltv,rate:p.prate,amort:p.am,years:p.hy,noi:noiS,g:p.g,cap:p.cap,sc:p.sc});
+      const inNOI=(p.ex*p.exr)/1e6-p.cot-(R-p.ex)*p.vx/1e6-p.nr;
+      return Object.assign(f,{flags,saleM:M,cont,ti,lc,leased,baseRent,leak,noiS,value,h,inNOI,padR,yob:noiS/f.total,bridgeBal:g0.loanBal,tenants});
+    },
+    render(r,p,K){
+      const {F,fx,row,T}=K, R=p.gla, ps=x=>'$'+Math.round(x*1e6/R), h=r.h;
+      K.rows('inplace',[{c:['Leased: '+F.N(p.ex)+' SF, avg ~$'+p.exr+' base rent',F.M2(p.ex*p.exr/1e6)]},{c:['Co-tenancy rent reductions','('+F.M2(p.cot)+')']},{c:['Lost recoveries on '+F.N(R-p.ex)+' SF vacant (~$'+p.vx+'/SF)','('+F.M2((R-p.ex)*p.vx/1e6)+')']},{c:['Non-recoverable expenses','('+F.M2(p.nr)+')']},{tot:1,c:['In-place NOI',F.M2(r.inNOI)]}]);
+      K.set('price','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/R)+'/SF), a '+F.P1(r.inNOI/p.price)+' cap on depressed income. Replacement cost is ~$300/SF. Like the distressed office and hotel, this is priced on basis, not current NOI.');
+      const b=[['Purchase price',p.price],['Closing costs',p.close],['Facade, signage, lot, box demising, pad site work',p.capex],['Contingency (10% of capex)',r.cont],['TI &amp; landlord work',r.ti],['Leasing commissions',r.lc],['Carry &amp; co-tenancy shortfall during lease-up',r.carry],['Financing fees &amp; interest reserve',r.fin]];
+      K.rows('basis',b.map(([n,v])=>({c:[n,F.M1(v),ps(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M1(r.total)),ps(r.total)]}]));
+      T.basis=fx('All-in basis','Sum of the basis lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M1(v))).join('')+row('All-in basis',F.$M1(r.total),1));
+      const nm=['Grocer (20-yr lease)','Urgent care / medical','Fitness','Off-price'];
+      const rl=[['Existing tenants (co-tenancy cured)',p.ex,p.cur]].concat(r.tenants.map((x,i)=>[nm[i],x[0],x[1]])).concat([['New shop leases',p.ssf,p.shr]]);
+      K.rows('roll',rl.map(([n,s,rt])=>({c:[n,F.N(s),'$'+rt.toFixed(2),F.M2(s*rt/1e6)]})).concat([{c:[p.np+' pad ground leases','–','$'+p.pad+'k each',F.M2(r.padR)]},{tot:1,c:['Base rent (~'+F.P0(r.leased/R)+' leased)',F.N(r.leased),'',F.M2(r.baseRent)]},{c:['Credit loss reserve ('+p.cl+'%)','','','('+F.M2(r.baseRent*p.cl/100)+')']},{c:['CAM caps, vacancy leakage, non-recoverables &amp; reserves','','','('+F.M2(r.leak)+')']},{tot:1,c:['Stabilized NOI','','',K.t('noi',F.M2(r.noiS))]}]));
+      T.noi=fx('Stabilized NOI','Base rent − credit loss − leakage',row('Base rent',F.M2(r.baseRent))+row('Credit loss','('+F.M2(r.baseRent*p.cl/100)+')')+row('Leakage &amp; reserves','('+F.M2(r.leak)+')')+row('NOI',F.$M2(r.noiS),1));
+      T.yob=fx('Yield on basis','Stabilized NOI ÷ all-in basis',F.$M2(r.noiS)+' ÷ '+F.$M1(r.total)+' = <b>'+F.P1(r.yob)+'</b>');
+      T.value=fx('Stabilized value','NOI ÷ cap rate',F.$M2(r.noiS)+' ÷ '+p.cap.toFixed(2)+'% = <b>'+F.$M1(r.value)+'</b>');
+      K.set('yob','Yield on all-in basis = '+F.M2(r.noiS)+' ÷ '+F.M1(r.total)+' = '+K.t('yob',F.P1(r.yob))+'. At a '+p.cap.toFixed(2)+'% cap, the stabilized center is worth ~'+K.t('value',F.$M1(r.value))+' ($'+Math.round(r.value*1e6/R)+'/SF), ~'+F.$M1(Math.abs(r.value-r.total))+' '+(r.value>=r.total?'above':'below')+' basis.');
+      const cashOut=h.loan*0.99-r.bridgeBal;
+      T.perm=fx('Permanent loan','LTV × stabilized value',p.ltv+'% × '+F.$M1(r.value)+' = <b>'+F.$M1(h.loan)+'</b>');
+      T.ds=fx('Annual debt service','Fixed payment on the new loan: PMT(rate ÷ 12, years × 12, loan) × 12',F.$M1(h.loan)+' at '+p.prate+'%, '+p.am+'-yr amortization = <b>'+F.$M2(h.ds)+'</b>');
+      T.dscr=fx('DSCR / debt yield','NOI ÷ debt service; NOI ÷ loan',F.$M2(r.noiS)+' ÷ '+F.$M2(h.ds)+' = <b>'+h.dscr.toFixed(2)+'x</b><br>'+F.$M2(r.noiS)+' ÷ '+F.$M1(h.loan)+' = <b>'+F.P1(h.dy)+'</b>');
+      T.hold=fx('Refi &amp; hold IRR','Same IRR formula, on equity cash flows through year '+p.hy,row('Equity in','('+F.$M1(h.inn)+')')+row('Cash back (refi, cash flow, sale)',F.$M1(h.out))+row('Hold IRR',F.P1(h.irr),1)+row('Equity multiple',h.mult.toFixed(2)+'x',1),'NOI grows '+p.g+'% a year; the center sells at the end of year '+p.hy+' at a '+p.cap.toFixed(2)+'% cap.');
+      K.rows('refi',[{c:['Bridge loan repaid ('+p.ltc+'% LTC, ~'+p.rate+'%)',F.$M1(r.bridgeBal)]},{c:['New permanent loan: '+p.ltv+'% LTV, fixed ~'+p.prate+'%, '+p.am+'-yr amortization',K.t('perm',F.$M1(h.loan))]},{c:['Cash '+(cashOut>=0?'returned to':'required from')+' equity',(cashOut>=0?'~':'–')+F.$M1(Math.abs(cashOut))+' (~'+F.P0(Math.abs(cashOut)/r.equity)+' of '+F.$M1(r.equity)+')']},{c:['Annual debt service',K.t('ds',F.$M2(h.ds))]},{c:['DSCR / debt yield',K.t('dscr',h.dscr.toFixed(2)+'x / '+F.P1(h.dy))]},{c:['Cash flow after debt service, Year 1','~'+F.$M1(h.cfY1)+'/yr, growing']}]);
+      K.finTips(T,r,p,{noi:r.noiS,value:r.value,saleM:r.saleM,mode:'prorata'}); T.loan=T.loan.replace('Construction loan','Bridge loan');
+      const dn=this.run(Object.assign({},p,{gsf:0,cur:p.exr,go:999,cap:p.cap+0.5}));
+      K.set('scen','<div><dt>Sell at month '+r.saleM+'</dt><dd>'+K.t('irr',F.P1(r.irr))+'<small>Levered IRR · '+K.t('mult',r.mult.toFixed(2)+'x')+'</small></dd></div><div><dt>Refi &amp; hold '+p.hy+' yrs</dt><dd>'+K.t('hold',F.P1(h.irr))+'<small>Levered IRR · '+h.mult.toFixed(2)+'x</small></dd></div><div><dt>Downside · no grocer</dt><dd>'+F.P1(dn.irr)+'<small>Sell IRR · '+dn.mult.toFixed(2)+'x · NOI ~'+F.$M1(dn.noiS)+' at '+(p.cap+0.5).toFixed(2)+'%</small></dd></div>');
+      K.sens('sens',[['Grocer opens 9 months late',{go:p.go+9}],['New shop rent –$4/SF',{shr:p.shr-4}],['Cap rate +50 bps',{cap:p.cap+0.5}],['Permanent rate +1%',{prate:p.prate+1}],['NOI growth 0% in the hold',{g:0}]],
+        [(s,b)=>K.d(s.noiS-b.noiS,x=>'$'+x.toFixed(2)+'M'),s=>F.P1(s.irr),s=>F.P1(s.h.irr),s=>s.h.mult.toFixed(2)+'x']);
+      K.sheet('sheet1',[['GLA',F.N(R)+' SF'],['In-place leased',F.P0(p.ex/R)],['Purchase price',F.$M1(p.price)],['Price / SF','$'+Math.round(p.price*1e6/R)],['All-in basis',F.$M1(r.total),'basis'],['Basis / SF',ps(r.total)]]);
+      K.sheet('sheet2',[['Leased','~'+F.P0(r.leased/R)],['NOI',F.$M2(r.noiS),'noi'],['Yield on basis',F.P1(r.yob),'yob'],['Value ('+p.cap.toFixed(1)+'%)','~'+F.$M1(r.value),'value'],['Perm DSCR',h.dscr.toFixed(2)+'x','dscr'],['Sell IRR / EM',F.P1(r.irr)+' / '+r.mult.toFixed(2)+'x','irr'],['Hold IRR / EM',F.P1(h.irr)+' / '+h.mult.toFixed(2)+'x','hold']]);
+      K.set('verdict','<b>Verdict:</b> the grocer is the whole thesis. Without it, NOI falls to ~'+F.$M1(dn.noiS)+', shops never come off co-tenancy, and the sell IRR drops from '+F.P1(r.irr)+' to '+F.P1(dn.irr)+'. Sign it before closing, or price the deal as if it won\'t come.');
+    }});
+  // ---------- @end ----------
+  // ---------- @rs ----------
+  // ---------- Retail Case 3: live re-anchor & sell model ----------
+  CK.mount({key:'rs',
+    inputs:[['price','Purchase price $M',10.5,0.25,0],['gr','Grocer rent $/SF',12,0.5,0],['shr','New shop rent $/SF',22,1,0],['padp','Pad sale price $M each',1.6,0.1,0],['ltc','Loan-to-cost %',60,1,0,90],['rate','Loan rate %',8.5,0.25,0],['cap','Sale cap %',7.25,0.25,1],['sale','Sale month',36,1,6,120],
+      ['gla','GLA SF',150000,5000,10000,null,1],['ex','Existing shop SF',57000,1000,0,null,1],['exr','Existing rent now $/SF',16,0.5,0,null,1],['cur','Rent once cured $/SF',17,0.5,0,null,1],['cot','Co-tenancy reductions $M/yr',0.1,0.01,0,null,1],
+      ['gsf','Grocer SF',54000,1000,0,null,1],['glw','Grocer landlord work $/SF',60,5,0,null,1],['go','Grocer opens (mo)',12,1,1,48,1],['ssf','New shop SF',25000,1000,0,null,1],['tis','Shop TI $/SF',35,5,0,null,1],['np','Pads sold',2,1,0,6,1],['padm','Pads sell (mo)',12,1,1,48,1],
+      ['capex','Facade, lot, signage &amp; pad work $M',3,0.1,0,null,1],['close','Closing costs $M',0.4,0.05,0,null,1],['lc','LC % of 10-yr rent',7.5,0.25,0,null,1],['vx','Lost recoveries on vacant $/SF',5,0.25,0,null,1],['nr','Non-recoverable $M/yr',0.1,0.01,0,null,1],['caps','Grocer CAM cap leakage $M/yr',0.01,0.01,0,null,1],['cl','Credit loss %',3,0.5,0,null,1],['sc','Sale costs %',2,0.25,0,null,1]],
+    note:'Fixed in the model: contingency at 10% of capex (spent over the first 9 months), 1% loan fee. Grocer landlord work is spent in the 6 months before it opens; new shops sign evenly from month 6 to 24 and pay after 4 months free. Pad sale proceeds pay down the loan. Loan and equity fund every dollar pro rata. Value = stabilized NOI ÷ sale cap, less a credit for shop rent not yet paying.',
+    run(p){
+      const R=p.gla, sale=Math.round(p.sale), N=sale+1, G=Math.round(p.go), flags=[];
+      const cont=0.1*p.capex, base=new Array(N).fill(0), noi=new Array(N).fill(0), repay=new Array(N).fill(0);
+      base[0]+=p.price+p.close; for(let t=1;t<=9&&t<N;t++) base[t]+=(p.capex+cont)/9;
+      const glw=p.gsf*p.glw/1e6, glc=p.lc/100*10*p.gsf*p.gr/1e6; for(let t=Math.max(1,G-6);t<G&&t<N;t++) base[t]+=glw/Math.min(6,G-Math.max(1,G-6)||1);
+      if(1<N) base[1]+=glc;
+      let ti=0, lc=glc; const shops=[]; for(let k=0;k<18;k++){const m=6+k, sz=p.ssf/18; if(m<N){base[m]+=sz*(p.tis+p.lc/100*10*p.shr)/1e6; ti+=sz*p.tis/1e6; lc+=sz*p.lc/100*10*p.shr/1e6;} const gw=p.gsf>0?G:0; shops.push({sz,op:Math.max(m+3,gw),pay:Math.max(m+3,gw)+4});}
+      const pads=Math.round(p.padm)<N?p.np*p.padp:0; if(pads) repay[Math.round(p.padm)]=pads;
+      for(let t=1;t<N;t++){ const cured=p.gsf>0&&t>G; let rent=p.ex*(cured?p.cur:p.exr), occ=p.ex;
+        if(cured){rent+=p.gsf*p.gr; occ+=p.gsf;}
+        for(const s of shops){ if(t>s.op) occ+=s.sz; if(t>s.pay) rent+=s.sz*p.shr; }
+        noi[t]=(rent*(1-p.cl/100)-(R-occ)*p.vx)/12/1e6-(cured?0:p.cot/12)-(p.nr+p.caps)/12; }
+      const leased=p.ex+p.gsf+p.ssf, baseRent=(p.ex*(p.gsf>0?p.cur:p.exr)+p.gsf*p.gr+p.ssf*p.shr)/1e6, leak=(R-leased)*p.vx/1e6+p.nr+p.caps+(p.gsf>0?0:p.cot), noiS=baseRent*(1-p.cl/100)-leak;
+      let credit=0; for(const s of shops) if(sale<s.pay) credit+=(s.pay-sale)*s.sz*p.shr/12/1e6;
+      if(p.gsf>0&&sale<=G){credit+=(G+1-sale)*p.gsf*p.gr/12/1e6+(G+1-sale)*p.cot/12; flags.push('The sale is before the grocer opens; the buyer is credited for the missing grocer rent.');}
+      const value=noiS/(p.cap/100), saleNet=value*(1-p.sc/100)-credit;
+      const f=CK.finance({base,noi,ltc:p.ltc,rate:p.rate,mode:'prorata',saleNet,repay});
+      const inNOI=p.ex*p.exr/1e6-p.cot-(R-p.ex)*p.vx/1e6-p.nr;
+      return Object.assign(f,{flags,saleM:sale,cont,glw,ti,lc,pads,leased,baseRent,leak,noiS,value,credit,inNOI,yob:noiS/(f.total-pads),net:f.total-pads});
+    },
+    render(r,p,K){
+      const {F,fx,row,T}=K, R=p.gla, ps=x=>'$'+Math.round(x*1e6/R);
+      K.rows('inplace',[{c:['Leased shops: '+F.N(p.ex)+' SF × $'+p.exr,F.M2(p.ex*p.exr/1e6)]},{c:['Co-tenancy rent reductions','('+F.M2(p.cot)+')']},{c:['Lost recoveries on '+F.N(R-p.ex)+' SF vacant (~$'+p.vx+'/SF)','('+F.M2((R-p.ex)*p.vx/1e6)+')']},{c:['Non-recoverable expenses','('+F.M2(p.nr)+')']},{tot:1,c:['In-place NOI',F.M2(r.inNOI)]}]);
+      K.set('price','Purchase price: '+F.$M1(p.price)+' ($'+Math.round(p.price*1e6/R)+'/SF), a '+F.P1(r.inNOI/p.price)+' cap on in-place NOI. We\'re paying for the land, the location and the grocer box.');
+      const b=[['Purchase price',p.price],['Closing costs',p.close],['Facade, lot, signage &amp; pad site work',p.capex],['Contingency',r.cont],['Grocer landlord work ('+F.N(p.gsf)+' SF × $'+p.glw+')',r.glw],['Shop TI ('+F.N(p.ssf)+' SF × $'+p.tis+')',r.ti],['Leasing commissions',r.lc],['Carry during lease-up',r.carry],['Financing fees &amp; interest reserve',r.fin]];
+      K.rows('basis',b.map(([n,v])=>({c:[n,F.M2(v)]})).concat([{tot:1,c:['Gross basis',F.M2(r.total)]},{c:['Less: '+p.np+' pad sales','('+F.M2(r.pads)+')']},{tot:1,c:['Net basis',K.t('net',F.M2(r.net)+' ('+ps(r.net)+'/SF)')]}]));
+      T.net=fx('Net basis','Gross basis − pad sale proceeds',F.$M2(r.total)+' − '+F.$M2(r.pads)+' = <b>'+F.$M2(r.net)+'</b>','Selling pads returns capital early: the proceeds pay down the loan.');
+      const rl=[['New grocer (15 yrs)',p.gsf,p.gr],['Existing shops (co-tenancy cured)',p.ex,p.cur],['New shop leases',p.ssf,p.shr]];
+      K.rows('roll',rl.map(([n,s,rt])=>({c:[n,F.N(s),'$'+rt,F.M2(s*rt/1e6)]})).concat([{tot:1,c:['Base rent ('+F.P0(r.leased/R)+' leased)',F.N(r.leased),'',F.M2(r.baseRent)]},{c:['Credit loss reserve ('+p.cl+'%)','','','('+F.M2(r.baseRent*p.cl/100)+')']},{c:['Vacancy leakage, grocer CAM cap, non-recoverables','','','('+F.M2(r.leak)+')']},{tot:1,c:['Stabilized NOI','','',K.t('noi',F.M2(r.noiS))]}]));
+      T.noi=fx('Stabilized NOI','Base rent − credit loss − leakage',row('Base rent',F.M2(r.baseRent))+row('Credit loss','('+F.M2(r.baseRent*p.cl/100)+')')+row('Leakage','('+F.M2(r.leak)+')')+row('NOI',F.$M2(r.noiS),1));
+      T.yob=fx('Yield on net basis','Stabilized NOI ÷ net basis',F.$M2(r.noiS)+' ÷ '+F.$M2(r.net)+' = <b>'+F.P1(r.yob)+'</b>');
+      K.set('yob','Yield on net basis = '+F.M2(r.noiS)+' ÷ '+F.M1(r.net)+' = '+K.t('yob',F.P1(r.yob))+'.');
+      T.value=fx('Sale price','Stabilized NOI ÷ sale cap',F.$M2(r.noiS)+' ÷ '+p.cap.toFixed(2)+'% = <b>'+F.$M1(r.value)+'</b> ($'+Math.round(r.value*1e6/R)+'/SF)');
+      K.finTips(T,r,p,{noi:r.noiS,value:r.value,saleM:r.saleM,mode:'prorata',credit:r.credit}); T.loan=T.loan.replace('Construction loan','Bridge loan');
+      const prof=r.value*(1-p.sc/100)-r.credit-r.net;
+      K.set('sale1','At a '+p.cap.toFixed(2)+'% cap, a buyer pays ~'+K.t('value',F.$M1(r.value))+' ($'+Math.round(r.value*1e6/R)+'/SF). After ~'+p.sc+'% selling costs'+(r.credit>0.05?' and credits':'')+', that\'s ~'+F.$M1(prof)+' '+(prof>=0?'above':'below')+' our net basis. The buyer gets a ~'+p.cap.toFixed(2)+'% yield on a re-anchored center; we capture the spread between our '+F.P1(r.yob)+' yield on cost and their '+p.cap.toFixed(2)+'% purchase cap.');
+      K.set('sale2','Financing: bridge loan at '+p.ltc+'% LTC ('+K.t('loan',F.$M1(r.loan))+', ~'+p.rate+'%), with the pad sale proceeds ('+F.$M1(r.pads)+') used to pay it down. Equity '+K.t('eq',F.$M1(r.equity))+'.');
+      const dn=this.run(Object.assign({},p,{gsf:0,cap:9,sale:Math.min(p.sale,24)}));
+      K.set('scen','<div><dt>Downside</dt><dd>'+dn.mult.toFixed(2)+'x<small>Grocer falls through; sell as value-add at a 9% cap</small></dd></div><div><dt>Base · sell month '+r.saleM+'</dt><dd>'+K.t('irr',F.P1(r.irr))+'<small>Levered IRR · '+K.t('mult',r.mult.toFixed(2)+'x')+'</small></dd></div><div><dt>Profit</dt><dd>'+F.$M1(r.out-r.inn)+'<small>to equity, after the loan</small></dd></div>');
+      const ex=[['Grocer lease signed, not open',Math.max(6,r.saleM-24<p.go?p.go-2:p.go-2),8.5],['Grocer open, shops leasing',p.go+6,7.75],['Grocer open 12+ months (your sale month)',r.saleM,p.cap]];
+      K.set('exit',ex.map(([n,m,c])=>{const s=this.run(Object.assign({},p,{sale:m,cap:c}));return '<tr><td>'+n+'</td><td class="n">'+s.saleM+'</td><td class="n">'+c.toFixed(2)+'%</td><td class="n">'+F.$M1(s.value-s.credit)+'</td><td class="n">'+F.P1(s.irr)+'</td><td class="n">'+s.mult.toFixed(2)+'x</td></tr>';}).join(''));
+      K.sheet('sheet1',[['GLA',F.N(R)+' SF'],['In-place leased',F.P0(p.ex/R)],['Purchase price',F.$M1(p.price)],['Price / SF','$'+Math.round(p.price*1e6/R)],['Net basis',F.$M1(r.net),'net'],['Pad sales',F.$M1(r.pads)]]);
+      K.sheet('sheet2',[['Leased',F.P0(r.leased/R)],['NOI',F.$M2(r.noiS),'noi'],['Yield on basis',F.P1(r.yob),'yob'],['Sale cap',p.cap.toFixed(2)+'%','cap'],['Sale price','~'+F.$M1(r.value),'value'],['Levered IRR',F.P1(r.irr),'irr'],['Equity multiple',r.mult.toFixed(2)+'x','mult']]);
+      K.set('verdict','<b>Verdict:</b> '+(r.irr>=0.2?'a high-IRR merchant play that depends entirely on signing the grocer: without it, equity gets '+dn.mult.toFixed(2)+'x.':'at '+F.P1(r.irr)+', the merchant play is thin for the risk of re-anchoring.'));
+    }});
+  // ---------- @end ----------
+  // ---------- @mv ----------
+  // ---------- Multifamily Case 3: live turnaround, refinance & hold model ----------
+  CK.mount({key:'mv',
+    inputs:[['price','Purchase price $M',28,0.5,0],['rent','Stabilized avg rent $/mo',1650,25,0],['occ','Stabilized occupancy %',94,1,0,100],['int','Interior reno $k/unit',14,1,0],['ltc','Bridge loan-to-cost %',70,1,0,90],['rate','Bridge rate %',8,0.25,0],['cap','Exit / value cap %',5.75,0.25,1],['arate','Agency rate %',5.75,0.25,0],
+      ['units','Units',240,10,10,null,1],['r0','In-place rent $/mo',1350,25,0,null,1],['o0','In-place occupancy %',78,1,0,100,1],['bd0','In-place bad debt &amp; concessions %',9,0.5,0,null,1],['bd','Stabilized bad debt %',2,0.5,0,null,1],['oth0','In-place other income $/unit/mo',42,2,0,null,1],['oth','Stabilized other income $/unit/mo',90,5,0,null,1],
+      ['ox0','In-place opex $/unit',8500,250,0,null,1],['ox','Stabilized opex $/unit',6890,100,0,null,1],['mg','Management %',4,0.25,0,null,1],['rr','Reserves $/unit (stabilized)',300,50,0,null,1],['close','Closing costs $M',0.7,0.05,0,null,1],['dm','Deferred maint. &amp; life safety $M',3.6,0.1,0,null,1],['ext','Exterior &amp; amenities $M',1.5,0.1,0,null,1],
+      ['ramp','Months to stabilize',24,1,3,60,1],['refm','Refinance / sale month',36,1,12,120,1],['ltv','Agency LTV %',60,1,0,80,1],['am','Amortization (yrs)',30,1,10,40,1],['g','Rent growth in hold %/yr',3,0.25,0,null,1],['hy','Hold horizon (yrs)',10,1,5,30,1],['sc','Sale costs %',1.5,0.25,0,null,1]],
+    note:'Fixed in the model: contingency at 10% of capex, 1% loan fees. Deferred maintenance is spent in months 1–6, exteriors in 1–12, interiors evenly as units turn until stabilization. Rent, occupancy, bad debt, other income and opex move in a straight line from in-place to stabilized over the months to stabilize. Loan and equity fund every dollar pro rata. "Sell" sells at the refinance month; "hold" refinances into agency debt there and sells at the end of the horizon.',
+    run(p){
+      const U=p.units, M=Math.round(p.refm), N=M+1, Rm=Math.max(1,Math.round(p.ramp));
+      const intT=p.int*U/1e3, capx=p.dm+p.ext+intT, cont=0.1*capx, base=new Array(N).fill(0), noi=new Array(N).fill(0);
+      base[0]+=p.price+p.close; for(let t=1;t<N;t++){ if(t<=6) base[t]+=p.dm*1.1/6; if(t<=12) base[t]+=p.ext*1.1/12; if(t<=Rm) base[t]+=intT*1.1/Rm; }
+      const yr=x=>{const rent=p.r0+(p.rent-p.r0)*x, occ=p.o0+(p.occ-p.o0)*x, bd=p.bd0+(p.bd-p.bd0)*x, oth=p.oth0+(p.oth-p.oth0)*x, ox=p.ox0+(p.ox-p.ox0)*x, rr=p.rr*x;
+        const gpr=U*rent*12/1e6, vac=gpr*(1-occ/100), bdl=gpr*bd/100, oi=U*oth*12/1e6, egi=gpr-vac-bdl+oi, opx=U*ox/1e6, mgt=egi*p.mg/100, res=U*rr/1e6; return {rent,occ,gpr,vac,bdl,oi,egi,opx,mgt,res,noi:egi-opx-mgt-res};};
+      for(let t=1;t<N;t++) noi[t]=yr(Math.min(1,t/Rm)).noi/12;
+      const i0=yr(0), st=yr(1), value=st.noi/(p.cap/100);
+      const f=CK.finance({base,noi,ltc:p.ltc,rate:p.rate,mode:'prorata',saleNet:value*(1-p.sc/100)});
+      const g0=CK.finance({base,noi,ltc:p.ltc,rate:p.rate,mode:'prorata',saleNet:0});
+      const h=CK.refi({cf:g0.eqCF,M,value,ltv:p.ltv,rate:p.arate,amort:p.am,years:p.hy,noi:st.noi,g:p.g,cap:p.cap,sc:p.sc});
+      return Object.assign(f,{U,saleM:M,i0,st,value,h,intT,cont,bridgeBal:g0.loanBal,yob:st.noi/f.total,flags:M<Rm?['The refinance/sale comes before the property stabilizes; the agency lender would size off lower income.']:[]});
+    },
+    render(r,p,K){
+      const {F,fx,row,T}=K, U=r.U, pu=x=>F.K(x*1e3/U), i0=r.i0, st=r.st, h=r.h;
+      K.rows('inplace',[{c:['Gross potential rent: '+F.N(U)+' × '+F.D(p.r0)+' × 12',F.M2(i0.gpr)]},{c:['Vacancy ('+F.P0(1-p.o0/100)+', incl. down units)','('+F.M2(i0.vac)+')']},{c:['Bad debt &amp; concessions','('+F.M2(i0.bdl)+')']},{c:['Other income',F.M2(i0.oi)]},{tot:1,c:['EGI',F.M2(i0.egi)]},{c:['Operating expenses ('+F.D(p.ox0)+'/unit, inflated by emergency repairs)','('+F.M2(i0.opx)+')']},{c:['Management ('+p.mg+'%)','('+F.M2(i0.mgt)+')']},{tot:1,c:['In-place NOI',F.M2(i0.noi)]}]);
+      K.set('price','Purchase price: '+F.$M1(p.price)+' ('+F.K(p.price*1e3/U)+'/unit), a '+F.P1(i0.noi/p.price)+' cap on in-place NOI. Replacement cost is $300k+ per unit.');
+      const b=[['Purchase price',p.price],['Closing costs',p.close],['Deferred maintenance &amp; life safety',p.dm],['Interior renovations ('+F.N(U)+' × $'+p.int+'k)',r.intT],['Exterior &amp; amenities',p.ext],['Contingency (10%)',r.cont],['Operating shortfall during turnaround',r.carry],['Financing fees &amp; interest reserve',r.fin]];
+      K.rows('budget',b.map(([n,v])=>({c:[n,F.M2(v),pu(v)]})).concat([{tot:1,c:['All-in basis',K.t('basis',F.M2(r.total)),pu(r.total)]}]));
+      T.basis=fx('All-in basis','Sum of the budget lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M2(v))).join('')+row('All-in basis',F.$M2(r.total),1));
+      const rw=(l,a,b2,tk)=>({c:[l,a,tk?K.t(tk,b2):b2]});
+      K.rows('noi',[rw('Average rent',F.D(p.r0),F.D(p.rent)),rw('Physical occupancy',p.o0+'%',p.occ+'%'),rw('GPR ($M)',F.M2(i0.gpr),F.M2(st.gpr)),rw('Vacancy, bad debt, concessions ($M)','('+F.M2(i0.vac+i0.bdl)+')','('+F.M2(st.vac+st.bdl)+')'),rw('Other income incl. RUBS ($M)',F.M2(i0.oi),F.M2(st.oi)),rw('EGI ($M)',F.M2(i0.egi),F.M2(st.egi)),rw('Opex, management &amp; reserves ($M)','('+F.M2(i0.opx+i0.mgt+i0.res)+')','('+F.M2(st.opx+st.mgt+st.res)+')'),{tot:1,c:['NOI ($M)',F.M2(i0.noi),K.t('noi',F.M2(st.noi))]}]);
+      T.noi=fx('Stabilized NOI','EGI − opex − management − reserves',row('GPR',F.M2(st.gpr))+row('Vacancy &amp; bad debt','('+F.M2(st.vac+st.bdl)+')')+row('Other income',F.M2(st.oi))+row('EGI',F.M2(st.egi),1)+row('Opex','('+F.M2(st.opx)+')')+row('Management','('+F.M2(st.mgt)+')')+row('Reserves','('+F.M2(st.res)+')')+row('NOI',F.$M2(st.noi),1));
+      T.yob=fx('Yield on basis','Stabilized NOI ÷ all-in basis',F.$M2(st.noi)+' ÷ '+F.$M2(r.total)+' = <b>'+F.P1(r.yob)+'</b>');
+      T.value=fx('Stabilized value','NOI ÷ cap rate',F.$M2(st.noi)+' ÷ '+p.cap.toFixed(2)+'% = <b>'+F.$M1(r.value)+'</b> ('+F.K(r.value*1e3/U)+'/unit)');
+      K.set('yob','Yield on all-in basis = '+F.M2(st.noi)+' ÷ '+F.M1(r.total)+' = '+K.t('yob',F.P1(r.yob))+'. At a '+p.cap.toFixed(2)+'% cap, the stabilized property is worth ~'+K.t('value',F.$M1(r.value))+' ('+F.K(r.value*1e3/U)+'/unit), ~'+F.$M1(Math.abs(r.value-r.total))+' '+(r.value>=r.total?'above':'below')+' basis.');
+      K.finTips(T,r,p,{noi:st.noi,value:r.value,saleM:r.saleM,mode:'prorata'}); T.loan=T.loan.replace('Construction loan','Bridge loan');
+      K.set('bridge','Bridge loan at '+p.ltc+'% LTC ('+K.t('loan',F.$M1(r.loan))+', floating ~'+p.rate+'%) funds the turnaround. At month '+r.saleM+', refinance into a fixed-rate agency loan and keep the property.');
+      const cashOut=h.loan*0.99-r.bridgeBal;
+      T.perm=fx('Agency loan','LTV × stabilized value',p.ltv+'% × '+F.$M1(r.value)+' = <b>'+F.$M1(h.loan)+'</b>');
+      T.ds=fx('Annual debt service','PMT(rate ÷ 12, years × 12, loan) × 12',F.$M1(h.loan)+' at '+p.arate+'%, '+p.am+'-yr amortization = <b>'+F.$M2(h.ds)+'</b>');
+      T.dscr=fx('DSCR','NOI ÷ debt service',F.$M2(st.noi)+' ÷ '+F.$M2(h.ds)+' = <b>'+h.dscr.toFixed(2)+'x</b>','Agency lenders usually want ~1.25x or more.');
+      T.hold=fx('Refi &amp; hold IRR','Same IRR formula, on equity cash flows through year '+p.hy,row('Equity in','('+F.$M1(h.inn)+')')+row('Cash back (refi, cash flow, sale)',F.$M1(h.out))+row('Hold IRR',F.P1(h.irr),1)+row('Equity multiple',h.mult.toFixed(2)+'x',1),'NOI grows '+p.g+'% a year after the refinance.');
+      K.rows('refi',[{c:['New loan: '+p.ltv+'% LTV, fixed ~'+p.arate+'%, '+p.am+'-year amortization',K.t('perm',F.$M1(h.loan))]},{c:['Repays bridge loan',F.$M1(r.bridgeBal)]},{c:['Cash '+(cashOut>=0?'returned to':'required from')+' equity',F.$M1(Math.abs(cashOut))]},{c:['Annual debt service',K.t('ds',F.$M2(h.ds))]},{c:['DSCR',K.t('dscr',h.dscr.toFixed(2)+'x')]},{c:['Cash flow after debt service, Year 1','~'+F.$M1(h.cfY1)+'/yr, growing with rents']}]);
+      const dn=this.run(Object.assign({},p,{rent:p.rent-100,cap:p.cap+0.5}));
+      K.set('scen','<div><dt>Sell at month '+r.saleM+'</dt><dd>'+K.t('irr',F.P1(r.irr))+'<small>Levered IRR · '+K.t('mult',r.mult.toFixed(2)+'x')+'</small></dd></div><div><dt>Refi &amp; hold '+p.hy+' yrs</dt><dd>'+K.t('hold',F.P1(h.irr))+'<small>Levered IRR · '+h.mult.toFixed(2)+'x</small></dd></div><div><dt>Downside</dt><dd>'+dn.mult.toFixed(2)+'x<small>Rents '+F.D(p.rent-100)+', '+(p.cap+0.5).toFixed(2)+'% cap, sell</small></dd></div>');
+      K.set('hold-p',(cashOut<r.equity*0.25?'The refinance doesn\'t return much equity here because the bridge loan was already large, but the':'The refinance returns '+F.P0(cashOut/r.equity)+' of the equity, and the')+' hold produces a growing cash yield and much more total profit. Fixed-rate debt removes the floating-rate risk that sank the previous owner.');
+      K.sens('sens',[['Stabilized rent –$100',{rent:p.rent-100}],['Stabilized occupancy 90%',{occ:90}],['Interiors +$5k/unit',{int:p.int+5}],['Cap rate +50 bps',{cap:p.cap+0.5}],['Agency rate +1%',{arate:p.arate+1}]],
+        [(s,b)=>K.d(s.st.noi-b.st.noi,x=>'$'+x.toFixed(2)+'M'),s=>F.P1(s.irr),s=>F.P1(s.h.irr),s=>s.h.mult.toFixed(2)+'x']);
+      K.sheet('sheet1',[['Units',F.N(U)],['In-place occ.',p.o0+'%'],['Purchase price',F.$M1(p.price)],['Price / unit',F.K(p.price*1e3/U)],['All-in basis',F.$M1(r.total),'basis'],['Basis / unit',pu(r.total)]]);
+      K.sheet('sheet2',[['Occupancy',p.occ+'%'],['Avg rent',F.D(p.rent)],['NOI',F.$M2(st.noi),'noi'],['Yield on basis',F.P1(r.yob),'yob'],['Agency DSCR',h.dscr.toFixed(2)+'x','dscr'],['Sell IRR / EM',F.P1(r.irr)+' / '+r.mult.toFixed(2)+'x','irr'],['Hold IRR / EM',F.P1(h.irr)+' / '+h.mult.toFixed(2)+'x','hold']]);
+      K.set('verdict','<b>Verdict:</b> classic operational turnaround. Fix the building and management first; renovation premiums come second. '+(h.dscr<1.25?'Watch the refinance: a '+h.dscr.toFixed(2)+'x DSCR is below what agency lenders want.':''));
+    }});
+  // ---------- @end ----------
+  // ---------- @mc ----------
+  // ---------- Multifamily Case 4: live condo conversion model ----------
+  CK.mount({key:'mc',
+    inputs:[['price','Purchase price $M',27,0.5,0],['psf','Condo price $/SF',750,10,0],['reno','Unit renovation $k/unit',60,5,0],['pace','Sellout period (mo)',24,1,1,72],['ltc','Loan-to-cost %',60,1,0,90],['rate','Loan rate %',8,0.25,0],['ins','Tenants buying (insiders) %',15,1,0,100],['disc','Insider discount %',10,1,0,50],
+      ['units','Units',80,1,1,null,1],['sfu','Sellable SF / unit',900,10,100,null,1],['noi','Rental NOI today $M',1.45,0.05,0,null,1],['rcap','Rental cap %',5.25,0.25,1,null,1],['close','Closing costs $M',0.7,0.05,0,null,1],['common','Common areas &amp; systems $M',3,0.1,0,null,1],['legal','Condo legal, plan &amp; engineering $M',0.6,0.05,0,null,1],
+      ['reloc','Relocation assistance $k/unit',10,1,0,null,1],['cc','Carry per empty unit $/mo',650,25,0,null,1],['plan','Offering plan effective (mo)',9,1,1,24,1],['vacate','Units empty out over (mo)',18,1,1,48,1],['comm','Commissions &amp; marketing %',6,0.25,0,null,1],['xfer','Transfer taxes &amp; closing %',1.5,0.25,0,null,1],['cont','Contingency $M',0.8,0.05,0,null,1]],
+    note:'Fixed in the model: 1% loan fee, loan and equity fund every dollar pro rata, and every closing pays down the loan first (release prices) until it is repaid. Insiders close 3 months after the offering plan is effective. Other units empty out evenly over the period you set, are renovated in the 3 months after, and sell evenly from 6 months after the plan is effective. Rental NOI falls as units empty; each empty unit costs the carry per month until it closes. Common areas are spent over the first 18 months, legal over the months to the offering plan.',
+    run(p){
+      const U=p.units, P=Math.round(p.plan), S=Math.max(1,Math.round(p.pace)), V=Math.max(1,Math.round(p.vacate)), flags=[];
+      const ins=Math.round(U*p.ins/100), out=U-ins, start=P+6, N=Math.max(start+S, V+4)+1;
+      const base=new Array(N).fill(0), noi=new Array(N).fill(0), repay=new Array(N).fill(0);
+      base[0]+=p.price+p.close; for(let t=1;t<=18&&t<N;t++) base[t]+=p.common/18; for(let t=1;t<=P;t++) base[t]+=p.legal/P; base[1]+=p.cont;
+      const nr=1-p.comm/100-p.xfer/100, gross=U*p.sfu*p.psf/1e6, insDisc=ins*p.sfu*p.psf*p.disc/100/1e6;
+      // insiders: renovate light? they buy as-is at discount, close at P+3
+      let renoT=0, relT=0;
+      const vac=new Array(N).fill(0), owned=new Array(N).fill(0);
+      for(let k=1;k<=V;k++){ const m=k, n=out/V; if(m<N){ base[m]+=n*p.reloc/1e3; relT+=n*p.reloc/1e3; } const rm=Math.min(N-1,m+2); base[rm]+=n*p.reno/1e3; renoT+=n*p.reno/1e3; }
+      const ip=P+3, gIns=ins*p.sfu*p.psf*(1-p.disc/100)/1e6*nr; if(ip<N) repay[ip]+=gIns;
+      for(let k=0;k<S;k++){ const m=start+k; if(m<N) repay[m]+=out/S*p.sfu*p.psf/1e6*nr; }
+      for(let t=1;t<N;t++){ const emptied=Math.min(out,out*t/V), sold=Math.min(out,out*Math.max(0,t-start+1)/S), insSold=t>=ip?ins:0;
+        const rented=U-emptied-insSold>0?(U-emptied-(t>=ip?ins:0)):0; const rentedUnits=Math.max(0,U-emptied-(t>=ip?ins:0));
+        const emptyUnsold=Math.max(0,emptied-sold);
+        noi[t]=p.noi*rentedUnits/U/12-emptyUnsold*p.cc/1e6; }
+      const f=CK.finance({base,noi,ltc:p.ltc,rate:p.rate,mode:'prorata',saleNet:0,repay});
+      const net=(gross-insDisc)*nr, profit=net+f.opDist*0-f.total, rentalV=p.noi/(p.rcap/100);
+      if(f.loanBal>0.01) flags.push('The loan isn\'t fully repaid by the sellout; '+CK.F.$M1(f.loanBal)+' is left at the end.');
+      return Object.assign(f,{U,ins,out,P,start,S,gross,insDisc,comm:(gross-insDisc)*p.comm/100,xfer:(gross-insDisc)*p.xfer/100,net,renoT,relT,rentalV,profit:net-f.total,margin:(net-f.total)/f.total,saleM:N-1,flags});
+    },
+    render(r,p,K){
+      const {F,fx,row,T}=K, U=r.U, pu=x=>F.K(x*1e3/U);
+      K.rows('arb',[{c:['How it\'s valued','NOI ÷ cap rate','Units × sale price']},{c:['Income / revenue','NOI ~'+F.$M2(p.noi),'Sellout ~'+F.$M1(r.gross)]},{c:['Value',K.t('rv','~'+F.$M1(r.rentalV)+' at '+p.rcap+'% cap'),'~'+F.$M1(r.net)+' net of sales costs']},{c:['Per unit','~'+F.K(r.rentalV*1e3/U),'~'+F.K(p.sfu*p.psf/1e3)+' gross']}]);
+      T.rv=fx('Rental value','Rental NOI ÷ cap rate',F.$M2(p.noi)+' ÷ '+p.rcap+'% = <b>'+F.$M1(r.rentalV)+'</b>','What an apartment investor would pay. The lender\'s fallback if condo sales stall.');
+      const b=[['Purchase price',p.price],['Closing costs',p.close],['Unit renovations ('+r.out+' × $'+p.reno+'k)',r.renoT],['Common areas, roof, facade, elevators, systems',p.common],['Condo legal, offering plan, engineering report',p.legal],['Tenant relocation assistance',r.relT],['Vacancy carry (net of rent from occupied units)',r.carry],['Financing fees &amp; interest',r.fin],['Contingency',p.cont]];
+      K.rows('budget',b.map(([n,v])=>({c:[n,F.M1(v),pu(v)]})).concat([{tot:1,c:['Development cost',K.t('cost',F.M1(r.total)),pu(r.total)]}]));
+      T.cost=fx('Development cost','Sum of the budget lines',b.map(([n,v])=>row(n.replace(/ \(.*\)/,''),F.M1(v))).join('')+row('Total',F.$M1(r.total),1),'Rent from units still occupied pays part of the interest; only the shortfall is in the budget.');
+      K.rows('sell',[{c:['Gross sellout: '+F.N(U*p.sfu)+' sellable SF × $'+p.psf,F.M2(r.gross)]},{c:['Insider discount ('+p.disc+'% off for tenants buying ~'+p.ins+'% of units)','('+F.M2(r.insDisc)+')']},{c:['Sales commissions &amp; marketing ('+p.comm+'%)','('+F.M2(r.comm)+')']},{c:['Transfer taxes &amp; closing ('+p.xfer+'%)','('+F.M2(r.xfer)+')']},{tot:1,c:['Net sales proceeds',K.t('net',F.M2(r.net))]},{c:['Development cost','('+F.M2(r.total)+')']},{tot:1,c:['Profit',K.t('profit',F.M2(r.profit))]}]);
+      T.net=fx('Net sales proceeds','(Gross sellout − insider discount) × (1 − commissions − transfer costs)','('+F.$M2(r.gross)+' − '+F.$M2(r.insDisc)+') × (1 − '+(p.comm+p.xfer)+'%) = <b>'+F.$M2(r.net)+'</b>');
+      T.profit=fx('Profit','Net sales proceeds − development cost',F.$M2(r.net)+' − '+F.$M2(r.total)+' = <b>'+F.$M2(r.profit)+'</b>');
+      T.margin=fx('Margin on cost','Profit ÷ development cost',F.$M2(r.profit)+' ÷ '+F.$M1(r.total)+' = <b>'+F.P1(r.margin)+'</b>','Condo developers usually target 15–25%.');
+      K.finTips(T,r,{ltc:p.ltc,cap:p.rcap},{noi:p.noi,value:r.rentalV,saleM:r.saleM,mode:'prorata'}); T.loan=T.loan.replace('Construction loan','Bridge loan');
+      T.irr=T.irr.replace(/Sale, net of costs[^<]*<\/span><span>[^<]*<\/span>/,'Net condo closings</span><span>'+F.$M1(r.net)+'</span>').replace(/Less loan repaid<\/span><span>\([^)]*\)/,'Less loan repaid from closings</span><span>('+F.$M1(r.loan)+')');
+      K.set('margin','Margin on total cost ≈ '+K.t('margin',F.P1(r.margin))+'. Rent from still-occupied units during the transition helps pay interest.');
+      K.set('scen','<div><dt>Margin on cost</dt><dd>'+K.t('margin',F.P1(r.margin))+'<small>target 15–25%</small></dd></div><div><dt>Equity multiple</dt><dd>'+K.t('mult',r.mult.toFixed(2)+'x')+'<small>~'+F.yrs(r.saleM)+' years</small></dd></div><div><dt>Levered IRR</dt><dd>'+K.t('irr',F.P1(r.irr))+'<small>'+p.ltc+'% LTC loan, '+F.$M1(r.equity)+' equity</small></dd></div>');
+      K.sens('sens',[['Condo price –10%',{psf:p.psf*0.9}],['Sellout 36 months',{pace:36}],['Renovation +$20k/unit',{reno:p.reno+20}],['30% of tenants buy as insiders',{ins:30}],['Offering plan 6 months late',{plan:p.plan+6}]],
+        [(s,b)=>K.d(s.profit-b.profit,x=>'$'+x.toFixed(1)+'M'),s=>F.P1(s.margin),s=>F.P1(s.irr),s=>s.mult.toFixed(2)+'x']);
+      K.set('credit','Lenders treat conversions like condo development: sized to net sellout, with release prices per unit and a fallback to rental value. Here the rental value ('+F.$M1(r.rentalV)+') is '+(r.rentalV>=p.price?'above':'close to')+' the purchase price but '+(r.rentalV<r.total?'well below':'above')+' total cost ('+F.$M1(r.total)+'), so the lender\'s real protection is the condo sale price.');
+      K.sheet('sheet1',[['Units',F.N(U)],['Purchase price',F.$M1(p.price)],['Rental value / unit','~'+F.K(r.rentalV*1e3/U),'rv'],['Condo price / SF','$'+p.psf],['Development cost',F.$M1(r.total),'cost'],['Loan / equity',F.$M1(r.loan)+' / '+F.$M1(r.equity),'loan']]);
+      K.sheet('sheet2',[['Net sellout',F.$M1(r.net),'net'],['Profit',F.$M1(r.profit),'profit'],['Margin on cost',F.P1(r.margin),'margin'],['Levered IRR',F.P1(r.irr),'irr'],['Equity multiple',r.mult.toFixed(2)+'x','mult']]);
+      K.set('verdict','<b>Verdict:</b> '+(r.margin<0.12?'margin of '+F.P1(r.margin)+' is too thin for condo risk.':'works only where buyer demand is strong and local law allows conversion. A 10% lower condo price cuts the margin to '+F.P1(this.run(Object.assign({},p,{psf:p.psf*0.9})).margin)+'.'));
     }});
   // ---------- @end ----------
   // @@CASES@@
