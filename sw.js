@@ -1,5 +1,5 @@
 // Offline cache for the CRE Study Guide. The version changes on every build, so updates install automatically.
-const CACHE='cre-guide-bfc62e64f3';
+const CACHE='cre-guide-d80f87a023';
 const FILES=['./','index.html','zh.html','manifest.webmanifest','icons/icon-192.png','icons/icon-512.png','icons/apple-touch-icon.png',
   'fonts/inter.woff2'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting()));});
