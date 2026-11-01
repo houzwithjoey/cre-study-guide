@@ -931,6 +931,24 @@ html.is-dark .pager .next{color:#111118}
 .lesson-video video{display:block;width:100%;aspect-ratio:16/9;background:#0f0f12;border-radius:10px;border:1px solid var(--rule)}
 .lesson-video figcaption{font-size:13px;color:var(--muted);margin-top:8px;line-height:1.5}
 .lesson-video figcaption b{color:var(--ink);font-weight:600;margin-right:4px}
+.hm-vhead{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 20px;margin-bottom:16px}
+.hm-vhead p{color:var(--muted);margin:4px 0 0;max-width:70ch}
+.hm-vall{font:600 14px var(--f-body);color:var(--brand);border:1px solid var(--rule);border-radius:999px;padding:7px 14px;white-space:nowrap;text-decoration:none}
+.hm-vall:hover{border-color:var(--brand)}
+.hm-vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.hm-vcard{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--rule);border-radius:12px;overflow:hidden;color:var(--ink);text-decoration:none;transition:border-color .15s,transform .15s}
+.hm-vcard:hover{border-color:var(--brand);transform:translateY(-1px)}
+.hm-vthumb{position:relative;display:block;aspect-ratio:16/9;background:#0d1624}
+.hm-vthumb img{display:block;width:100%;height:100%;object-fit:cover}
+.hm-vdur{position:absolute;right:8px;bottom:8px;background:rgba(8,14,24,.85);color:#eef2f7;font:600 12px var(--f-body);padding:2px 7px;border-radius:5px;font-variant-numeric:tabular-nums}
+.hm-vplay{position:absolute;left:50%;top:50%;width:46px;height:46px;margin:-23px 0 0 -23px;border-radius:50%;background:rgba(238,242,247,.92);opacity:0;transition:opacity .15s}
+.hm-vplay::after{content:"";position:absolute;left:18px;top:14px;border-left:14px solid #0d1624;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.hm-vcard:hover .hm-vplay{opacity:1}
+.hm-vbody{display:flex;flex-direction:column;gap:5px;padding:12px 14px 14px}
+.hm-vcode{font:600 11.5px var(--f-body);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:7px}
+.hm-vcode::before{content:"";width:8px;height:8px;border-radius:2px;background:var(--c)}
+.hm-vt{font:600 15.5px var(--f-body)}
+.hm-vd{font-size:13.5px;color:var(--muted);line-height:1.5}
 </style>
 <script>
 (function(){var t=null;try{t=localStorage.getItem('cre-theme')}catch(e){}
@@ -989,6 +1007,7 @@ html.is-dark .pager .next{color:#111118}
   <div class="wrap hm-body">
     <div class="hm-group"><h2>Asset types</h2><p>How each property type makes money, how it's underwritten, and the cases that test it.</p><div class="hm-grid" data-group="Asset types"></div></div>
     <div class="hm-group"><h2>Core concepts</h2><p>The building blocks that apply to every deal: capital, securitization, tax, entitlements and distress.</p><div class="hm-grid" data-group="Concepts"></div></div>
+    <div class="hm-group hm-videos"><div class="hm-vhead"><div><h2>Additional Video Lessons</h2><p>Short narrated lessons on the core math of CRE finance. Start with one from each topic, then browse the full set.</p></div><a class="hm-vall" href="https://claude.ai/artifact/3XUQrDPeppwDi88UNZzBsC" target="_blank" rel="noopener">See all 6 lessons →</a></div><div class="hm-vgrid"><a class="hm-vcard" href="https://claude.ai/artifact/HioQHjCDk1iyJezXZgWKwe" target="_blank" rel="noopener"><span class="hm-vthumb"><img src="media/lesson-valuation-01.jpg" alt="" loading="lazy"><span class="hm-vdur">1:37</span><span class="hm-vplay" aria-hidden="true"></span></span><span class="hm-vbody"><span class="hm-vcode" style="--c:#f2b23e">Valuation 01</span><span class="hm-vt">The cap rate: how income sets value</span><span class="hm-vd">Value = NOI ÷ cap rate, and why small cap rate moves swing value.</span></span></a><a class="hm-vcard" href="https://claude.ai/artifact/RAHVW8Kk4gQnZ7JxbSSBR6" target="_blank" rel="noopener"><span class="hm-vthumb"><img src="media/lesson-returns-01.jpg" alt="" loading="lazy"><span class="hm-vdur">2:07</span><span class="hm-vplay" aria-hidden="true"></span></span><span class="hm-vbody"><span class="hm-vcode" style="--c:#2ec4b6">Returns 01</span><span class="hm-vt">Discount rate, NPV &amp; IRR</span><span class="hm-vd">What a future dollar is worth today, and the rate where NPV hits zero.</span></span></a><a class="hm-vcard" href="https://claude.ai/artifact/7QTKZSGsPs1FhV9Ux2DGNm" target="_blank" rel="noopener"><span class="hm-vthumb"><img src="media/lesson-debt-sizing-01.jpg" alt="" loading="lazy"><span class="hm-vdur">2:04</span><span class="hm-vplay" aria-hidden="true"></span></span><span class="hm-vbody"><span class="hm-vcode" style="--c:#8fa2ff">Debt sizing 01</span><span class="hm-vt">LTV, DSCR &amp; debt yield</span><span class="hm-vd">The three tests lenders use to size a loan, and which one binds.</span></span></a></div></div>
   </div>
 </section>
 
